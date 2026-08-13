@@ -11,7 +11,7 @@ while IFS=$'\t' read -r url local; do
   [ -s "$local" ] && { ok=$((ok+1)); continue; }   # already downloaded
   tmp="/tmp/flv-$$.png"
   if curl -sfL -A "$UA" "$url" -o "$tmp" 2>/dev/null; then
-    if sips -s format jpeg -s formatOptions 82 -Z 900 "$tmp" --out "$local" >/dev/null 2>&1; then
+    if sips -s format jpeg -s formatOptions 86 -Z 1200 "$tmp" --out "$local" >/dev/null 2>&1; then
       ok=$((ok+1))
     else fail=$((fail+1)); echo "sips-fail $local"; fi
     rm -f "$tmp"
