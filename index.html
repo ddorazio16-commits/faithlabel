@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FaithLabel — Luxury Christian Apparel for Modern Believers</title>
+  <meta name="description" content="FaithLabel crafts premium Christian hoodies, crewnecks and tees — scripture worn close to the heart. Faith, made to wear." />
+
+  <!-- Fonts: Cormorant Garamond (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23163BA1'/%3E%3Cpath d='M16 6v20M9 13h14' stroke='%23C8A24C' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ── Announcement bar — Verse of the Week ─────────── -->
+  <div class="announce" id="announce">
+    <p class="announce__verse">
+      <span class="announce__tag">Verse of the Week</span>
+      <span class="announce__sep">&#10022;</span>
+      <span id="verseText">&ldquo;The Lord is my light and my salvation.&rdquo; &mdash; Psalm 27:1</span>
+    </p>
+  </div>
+
+  <!-- ── Header ───────────────────────────────────────── -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <button class="icon-btn nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+
+      <nav class="nav nav--left" aria-label="Primary">
+        <a href="#mission">Our Mission</a>
+        <a href="#journal">Journal</a>
+      </nav>
+
+      <a class="brand" href="#top" aria-label="FaithLabel home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26"><path d="M16 4v24M8 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </span>
+        <span class="brand__word">FaithLabel</span>
+      </a>
+
+      <div class="header__actions">
+        <button class="icon-btn cart-btn" id="cartToggle" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 0 1 6 0" stroke-linecap="round"/></svg>
+          <span class="cart-count" id="cartCount" hidden>0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav drawer -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#collection">Shop the Collection</a>
+      <a href="#mission">Our Mission</a>
+      <a href="#journal">Journal</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ── Hero ───────────────────────────────────────── -->
+    <section class="hero" id="hero">
+      <div class="hero__media">
+        <div class="hero__img" id="heroImg"></div>
+        <div class="hero__wash"></div>
+      </div>
+      <div class="hero__content">
+        <p class="eyebrow eyebrow--light reveal" data-verse>Psalm 27:1</p>
+        <h1 class="hero__title reveal">
+          <span class="line">Wear the</span>
+          <span class="line line--serif">Light.</span>
+        </h1>
+        <p class="hero__sub reveal">Luxury Christian apparel for modern believers — scripture, considered design, and premium weight, made to be worn as boldly as it&rsquo;s believed.</p>
+        <div class="hero__cta reveal">
+          <a href="#collection" class="btn btn--gold">Shop the Collection</a>
+          <a href="#mission" class="btn btn--ghost">Our Mission</a>
+        </div>
+      </div>
+      <a href="#collection" class="hero__scroll" aria-label="Scroll to collection">
+        <span>Scroll</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M6 13l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <!-- ── Value band ─────────────────────────────────── -->
+    <section class="promise" aria-label="Why FaithLabel">
+      <div class="promise__item reveal">
+        <span class="promise__k">Premium Weight</span>
+        <span class="promise__v">Heavyweight cotton blends built to last a lifetime of Sundays.</span>
+      </div>
+      <div class="promise__item reveal">
+        <span class="promise__k">Made to Order</span>
+        <span class="promise__v">Each piece printed for you — considered, never wasteful.</span>
+      </div>
+      <div class="promise__item reveal">
+        <span class="promise__k">Worn with Purpose</span>
+        <span class="promise__v">A quiet witness — scripture carried close to the heart.</span>
+      </div>
+    </section>
+
+    <!-- ── Collection ─────────────────────────────────── -->
+    <section class="collection" id="collection">
+      <div class="collection__head reveal">
+        <p class="eyebrow">The Collection</p>
+        <h2 class="section-title">Garments of Conviction</h2>
+        <p class="section-lede">Eighteen pieces, each a wearable scripture. Filter by what you&rsquo;re looking for — the wardrobe rearranges itself.</p>
+      </div>
+
+      <!-- Filter / control bar -->
+      <div class="controls" id="controls">
+        <div class="controls__search" id="searchWrap">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/></svg>
+          <input type="search" id="searchInput" placeholder="Search by name or verse…" aria-label="Search products" autocomplete="off" />
+          <button class="search-clear" id="searchClear" aria-label="Clear search" hidden>&times;</button>
+        </div>
+
+        <div class="filters" id="filters" role="tablist" aria-label="Filter by category">
+          <span class="filters__pill-bg" id="pillBg" aria-hidden="true"></span>
+          <button class="pill is-active" role="tab" aria-selected="true" data-filter="all">All <em id="cAll">0</em></button>
+          <button class="pill" role="tab" aria-selected="false" data-filter="hoodie">Hoodies <em id="cHoodie">0</em></button>
+          <button class="pill" role="tab" aria-selected="false" data-filter="crewneck">Crewnecks <em id="cCrewneck">0</em></button>
+          <button class="pill" role="tab" aria-selected="false" data-filter="tshirt">T-Shirts <em id="cTshirt">0</em></button>
+        </div>
+      </div>
+
+      <!-- Product grid (populated by app.js) -->
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>No pieces match that search. Try another word or clear the filter.</p>
+    </section>
+
+    <!-- ── Mission ────────────────────────────────────── -->
+    <section class="mission" id="mission">
+      <div class="mission__inner">
+        <p class="eyebrow eyebrow--light reveal">Our Mission</p>
+        <h2 class="mission__statement reveal">
+          We believe faith is meant to be lived <em>out loud.</em> Every FaithLabel piece is a quiet sermon &mdash; premium fabric, honest design, and scripture worn close to the heart.
+        </h2>
+        <p class="mission__body reveal">Not fast fashion, but garments made to carry your conviction through ordinary days: the school run, the late shift, the long road home. We make them to order so nothing is wasted, and we make them well so they last. When someone reads the words you&rsquo;re wearing, we hope they remember they are seen, deeply loved, and never walking alone.</p>
+        <p class="mission__sign reveal">&mdash; The FaithLabel Family</p>
+      </div>
+    </section>
+
+    <!-- ── Newsletter ─────────────────────────────────── -->
+    <section class="signup" id="journal">
+      <div class="signup__inner reveal">
+        <p class="eyebrow">Join the fold</p>
+        <h2 class="section-title">First looks &amp; a weekly verse</h2>
+        <p class="section-lede">New drops, quiet reflections, and members-only early access. No noise.</p>
+        <form class="signup__form" id="signupForm">
+          <input type="email" placeholder="you@email.com" aria-label="Email address" required />
+          <button type="submit" class="btn btn--gold">Subscribe</button>
+        </form>
+        <p class="signup__note" id="signupNote" hidden>Welcome home. Check your inbox to confirm.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="brand brand--footer"><span class="brand__word">FaithLabel</span></span>
+        <p>Quality Christian apparel for modern believers. Spread the word of God through what you wear.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="https://www.instagram.com/faithlabelshop" target="_blank" rel="noopener noreferrer" aria-label="FaithLabel on Instagram">Instagram</a>
+          <a href="#" aria-label="TikTok">TikTok</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3>Shop</h3>
+        <a href="#collection" data-filter="hoodie">Hoodies</a>
+        <a href="#collection" data-filter="crewneck">Crewnecks</a>
+        <a href="#collection" data-filter="tshirt">T-Shirts</a>
+        <a href="#collection" data-filter="all">All Pieces</a>
+      </div>
+      <div class="footer__col">
+        <h3>House</h3>
+        <a href="#mission">Our Mission</a>
+        <a href="#journal">Journal</a>
+        <a href="#">Shipping &amp; Returns</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h3>Support</h3>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Size Guide</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© 2026 FaithLabel. All rights reserved.</span>
+      <span class="footer__pay">Secure checkout · <strong>Printify</strong>-ready fulfillment</span>
+    </div>
+  </footer>
+
+  <!-- ── Product detail (PDP) ───────────────────────── -->
+  <div class="pdp-overlay" id="pdpOverlay" hidden></div>
+  <div class="pdp" id="pdp" role="dialog" aria-modal="true" aria-label="Product details" aria-hidden="true">
+    <button class="pdp__close" id="pdpClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+    </button>
+    <div class="pdp__inner">
+      <div class="pdp__gallery">
+        <div class="pdp__stage">
+          <img id="pdpMainImg" alt="" />
+        </div>
+        <div class="pdp__thumbs" id="pdpThumbs"></div>
+      </div>
+      <div class="pdp__info">
+        <span class="pdp__verse card__verse" id="pdpVerse"></span>
+        <h2 class="pdp__title" id="pdpTitle"></h2>
+        <p class="pdp__sub" id="pdpSub"></p>
+        <div class="pdp__price" id="pdpPrice"></div>
+
+        <div class="pdp__group">
+          <div class="pdp__label">Color<span class="pdp__chosen" id="pdpColorName"></span></div>
+          <div class="pdp__swatches" id="pdpSwatches"></div>
+        </div>
+
+        <div class="pdp__group">
+          <div class="pdp__label">Size<button type="button" class="pdp__guide" id="sizeGuide">Size guide</button></div>
+          <div class="pdp__sizes" id="pdpSizes"></div>
+          <p class="pdp__hint" id="pdpSizeHint" hidden>Please choose a size.</p>
+        </div>
+
+        <div class="pdp__buy">
+          <div class="qty" id="pdpQty">
+            <button type="button" data-q="-1" aria-label="Decrease quantity">&minus;</button>
+            <span id="pdpQtyVal">1</span>
+            <button type="button" data-q="1" aria-label="Increase quantity">+</button>
+          </div>
+          <button class="btn btn--gold btn--full" id="pdpAdd">Add to Cart</button>
+        </div>
+
+        <ul class="pdp__meta">
+          <li>Made to order &middot; ships in 5&ndash;7 days</li>
+          <li>Complimentary shipping over $75</li>
+          <li>Secure checkout &middot; <strong>Printify</strong> fulfillment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Size guide ─────────────────────────────────── -->
+  <div class="sizeguide" id="sizeguide" role="dialog" aria-modal="true" aria-label="Size guide" aria-hidden="true" hidden>
+    <div class="sizeguide__card">
+      <button class="pdp__close" id="sizeguideClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+      </button>
+      <h3>Size guide</h3>
+      <p class="sizeguide__note">Unisex fit, measured flat in inches. When between sizes, we suggest sizing up.</p>
+      <div class="sizeguide__scroll">
+        <table>
+          <thead><tr><th>Size</th><th>Chest</th><th>Length</th><th>Sleeve</th></tr></thead>
+          <tbody>
+            <tr><td>S</td><td>20</td><td>27</td><td>33.5</td></tr>
+            <tr><td>M</td><td>22</td><td>28</td><td>34.5</td></tr>
+            <tr><td>L</td><td>24</td><td>29</td><td>35.5</td></tr>
+            <tr><td>XL</td><td>26</td><td>30</td><td>36.5</td></tr>
+            <tr><td>2XL</td><td>28</td><td>31</td><td>37.5</td></tr>
+            <tr><td>3XL</td><td>30</td><td>32</td><td>38.5</td></tr>
+            <tr><td>4XL</td><td>32</td><td>33</td><td>39.5</td></tr>
+            <tr><td>5XL</td><td>34</td><td>34</td><td>40.5</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Cart drawer ────────────────────────────────── -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart" id="cart" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart__head">
+      <h2>Your Cart <span id="cartHeadCount"></span></h2>
+      <button class="icon-btn" id="cartClose" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="cart__items" id="cartItems"></div>
+    <div class="cart__empty" id="cartEmpty">
+      <p>Your cart is quiet for now.</p>
+      <button class="btn btn--gold" id="cartEmptyShop">Browse the Collection</button>
+    </div>
+    <div class="cart__foot" id="cartFoot" hidden>
+      <div class="cart__row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <p class="cart__ship">Shipping &amp; taxes calculated at checkout.</p>
+      <button class="btn btn--gold btn--full" id="checkoutBtn">Proceed to Checkout</button>
+      <p class="cart__secure">Secure checkout powered by <strong>Printify</strong></p>
+    </div>
+  </aside>
+
+  <!-- ── Toast ─────────────────────────────────────── -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
