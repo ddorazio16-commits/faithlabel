@@ -627,3 +627,35 @@ input{ font-family:inherit; }
   *,*::before,*::after{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
   .reveal{ opacity:1; transform:none; }
 }
+
+/* ============================================================
+   Policy / legal subpages (privacy, terms, shipping, contact)
+   ============================================================ */
+.legal-header{
+  position:sticky; top:0; z-index:40; background:rgba(233,242,247,.92);
+  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--ink-10);
+}
+.legal-header__in{
+  max-width:var(--container); margin:0 auto; height:var(--header-h);
+  display:flex; align-items:center; justify-content:space-between; padding:0 clamp(1rem,4vw,2.4rem);
+}
+.legal-header .brand{ justify-self:start; }
+.legal-back{ font-size:.8rem; font-weight:500; letter-spacing:.06em; color:var(--ink); display:inline-flex; align-items:center; gap:.4em; }
+.legal-back:hover{ color:var(--gold-deep); }
+.legal-wrap{ max-width:760px; margin:0 auto; padding:clamp(2.6rem,6vw,4.5rem) clamp(1.4rem,5vw,2rem) 4rem; }
+.legal-wrap .eyebrow{ margin-bottom:1rem; }
+.legal-wrap h1{ font-family:var(--serif); font-weight:500; font-size:clamp(2.4rem,6vw,3.6rem); line-height:1.05; letter-spacing:-.01em; color:var(--ink); }
+.legal-wrap .updated{ color:var(--ink-45); font-size:.85rem; margin-top:.6rem; }
+.legal-wrap h2{ font-family:var(--serif); font-weight:600; font-size:1.5rem; color:var(--ink); margin:2.4rem 0 .7rem; }
+.legal-wrap p, .legal-wrap li{ color:var(--ink-70); line-height:1.75; font-size:.98rem; }
+.legal-wrap p{ margin-bottom:1rem; }
+.legal-wrap ul{ margin:0 0 1.2rem; padding-left:1.3rem; display:flex; flex-direction:column; gap:.5rem; }
+.legal-wrap li{ padding-left:.2rem; }
+.legal-wrap li::marker{ color:var(--gold); }
+.legal-wrap a{ color:var(--gold-deep); text-decoration:underline; text-underline-offset:2px; }
+.legal-wrap a:hover{ color:var(--ink); }
+.legal-wrap strong{ color:var(--ink); }
+.legal-note{ margin-top:2.6rem; padding:1.2rem 1.4rem; background:var(--cloud); border:1px solid var(--ink-10); border-radius:var(--radius-lg); font-size:.86rem; color:var(--ink-45); }
+.legal-foot{ border-top:1px solid var(--ink-10); text-align:center; padding:2rem 1rem; font-size:.82rem; color:var(--ink-45); }
+.legal-foot a{ color:var(--ink-70); }
