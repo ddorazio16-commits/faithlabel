@@ -27,6 +27,20 @@ const escHtml = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replac
 const escAttr = escHtml;
 const bySlug = s => PRODUCTS.find(p => p.slug === s);
 const colorOf = (p, name) => p.colors.find(c => c.name === name) || p.colors[0];
+/* exact price for a size (larger sizes cost more); falls back to base price */
+const priceFor = (p, size) => (p && p.sizePrices && p.sizePrices[size]) || (p && p.price) || 0;
+/* render a product description (blocks of {t:'p'|'h'|'li'}) to safe HTML */
+function renderDesc(blocks){
+  if(!blocks || !blocks.length) return '';
+  let html = '', inList = false;
+  const closeList = () => { if(inList){ html += '</ul>'; inList = false; } };
+  for(const b of blocks){
+    if(b.t === 'li'){ if(!inList){ html += '<ul>'; inList = true; } html += `<li>${escHtml(b.x)}</li>`; }
+    else { closeList(); html += b.t === 'h' ? `<h4>${escHtml(b.x)}</h4>` : `<p>${escHtml(b.x)}</p>`; }
+  }
+  closeList();
+  return html;
+}
 
 /* keep broken images from showing a broken-image icon on a luxury page */
 document.addEventListener('error', e => {
@@ -183,6 +197,12 @@ setTimeout(movePill, 300);
 const pdp = $('#pdp'), pdpOverlay = $('#pdpOverlay');
 let pdpState = { slug:null, color:null, size:null, qty:1 };
 
+function setPdpPrice(p){
+  $('#pdpPrice').innerHTML = pdpState.size
+    ? money(priceFor(p, pdpState.size))
+    : `<span>From</span> ${money(p.price)}`;
+}
+
 function openPDP(slug){
   const p = bySlug(slug);
   if(!p) return;
@@ -194,7 +214,8 @@ function openPDP(slug){
   $('#pdpVerse').textContent = p.verse;
   $('#pdpTitle').textContent = main;
   $('#pdpSub').textContent = sub;
-  $('#pdpPrice').innerHTML = `<span>From</span> ${money(p.price)}`;
+  setPdpPrice(p);
+  $('#pdpDesc').innerHTML = renderDesc(p.desc);
   $('#pdpQtyVal').textContent = '1';
   $('#pdpSizeHint').hidden = true;
 
@@ -252,6 +273,7 @@ pdp.addEventListener('click', e => {
   if(sz){
     pdpState.size = sz.dataset.size;
     $$('.size-btn', pdp).forEach(x => x.classList.toggle('is-active', x===sz));
+    setPdpPrice(bySlug(pdpState.slug));
     $('#pdpSizeHint').hidden = true;
     return;
   }
@@ -351,7 +373,7 @@ function renderCart(){
       <img class="cart-line__img" src="${img}" alt="${escAttr(main)}" />
       <div>
         <div class="cart-line__title">${main}</div>
-        <div class="cart-line__meta">${l.color} · ${l.size} · ${money(p.price)}</div>
+        <div class="cart-line__meta">${l.color} · ${l.size} · ${money(priceFor(p, l.size))}</div>
         <div class="cart-line__qty">
           <button data-dec="${key}" aria-label="Decrease quantity">−</button>
           <span>${l.qty}</span>
@@ -359,13 +381,13 @@ function renderCart(){
         </div>
       </div>
       <div class="cart-line__right">
-        <span class="cart-line__price">${money(p.price * l.qty)}</span>
+        <span class="cart-line__price">${money(priceFor(p, l.size) * l.qty)}</span>
         <button class="cart-line__remove" data-remove="${key}">Remove</button>
       </div>
     </div>`;
   }).join('');
 
-  $('#cartSubtotal').textContent = money(cart.reduce((s,l)=> s + bySlug(l.slug).price * l.qty, 0));
+  $('#cartSubtotal').textContent = money(cart.reduce((s,l)=> s + priceFor(bySlug(l.slug), l.size) * l.qty, 0));
 }
 
 cartItems.addEventListener('click', e => {
@@ -411,7 +433,7 @@ function bumpCart(){
 $('#checkoutBtn').addEventListener('click', async () => {
   const payload = {
     line_items: cart.map(l => ({ slug:l.slug, color:l.color, size:l.size, quantity:l.qty, printify_product_id: bySlug(l.slug).printifyId || '' })),
-    subtotal: cart.reduce((s,l)=> s + bySlug(l.slug).price * l.qty, 0),
+    subtotal: cart.reduce((s,l)=> s + priceFor(bySlug(l.slug), l.size) * l.qty, 0),
   };
   if(!PRINTIFY.connected){
     console.info('[FaithLabel] Printify order payload (ready to POST to %s):', PRINTIFY.checkoutEndpoint, payload);

@@ -75,6 +75,8 @@ for p in cat:
         "title": p["title"],
         "cat": p["category"],
         "price": p["price_min"],
+        "sizePrices": p.get("size_prices", {}),
+        "desc": p.get("desc", []),
         "verse": VERSE.get(slug, "Faithful"),
         "sizes": p["sizes"],
         "colors": colors,

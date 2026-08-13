@@ -553,6 +553,18 @@ input{ font-family:inherit; }
 .pdp__meta li::before{ content:"\2726"; color:var(--gold); font-size:.6rem; }
 .pdp__meta strong{ color:var(--gold-deep); }
 
+/* Product description */
+.pdp__desc{ margin-top:1.6rem; padding-top:1.4rem; border-top:1px solid var(--ink-10); }
+.pdp__desc h4{
+  font-family:var(--sans); font-size:.72rem; font-weight:700; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--gold-deep); margin:1.3rem 0 .6rem;
+}
+.pdp__desc h4:first-child{ margin-top:0; }
+.pdp__desc p{ font-size:.92rem; line-height:1.7; color:var(--ink-70); margin-bottom:.6rem; }
+.pdp__desc ul{ list-style:none; margin:0 0 .4rem; padding:0; display:flex; flex-direction:column; gap:.4rem; }
+.pdp__desc li{ position:relative; padding-left:1.2rem; font-size:.9rem; color:var(--ink-70); line-height:1.5; }
+.pdp__desc li::before{ content:""; position:absolute; left:0; top:.55em; width:6px; height:6px; border-radius:50%; background:var(--gold); }
+
 /* card is now a button into the PDP */
 .card{ cursor:pointer; }
 .card__quick{ pointer-events:none; }

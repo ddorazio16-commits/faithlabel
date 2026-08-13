@@ -15,7 +15,7 @@ const read = f => fs.readFileSync(`${DIR}/${f}`, 'utf8');
 /* Embed EVERY gallery image so the live link shows all the pictures too.
    Compressed enough (max edge / quality below) that ~250 images stay under
    the 16MB Artifact limit. The deployable folder keeps full-res versions. */
-const EMBED_PX = 380, EMBED_Q = 54;
+const EMBED_PX = 620, EMBED_Q = 64;
 const uriCache = new Map();
 function imgURI(rel){
   if(!rel) return rel;

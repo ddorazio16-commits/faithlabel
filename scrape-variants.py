@@ -2,7 +2,7 @@
 """Fetch every FaithLabel product's variant data from the source store's
 per-product .js endpoint and normalise it into a clean catalog for the
 product-detail pages (colors, sizes, per-color image galleries, prices)."""
-import json, urllib.request, re, sys
+import json, urllib.request, re, sys, html as _html
 
 BASE = "https://w2fb1a-q3.myshopify.com/products/"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36"
@@ -46,6 +46,38 @@ def norm_src(src):
     # strip query string, keep permanent cdn.shopify.com path
     return src.split("?")[0]
 
+def clean_desc(raw):
+    """Parse the source HTML description into ordered blocks:
+       {t:'p'} paragraph, {t:'h'} short section header, {t:'li'} feature bullet.
+       Inline dash-lists become bullets; the returns/refund blurb is dropped
+       (it lives on the Shipping & Returns page instead)."""
+    txt = re.sub(r"<[^>]+>", "\n", raw or "")
+    txt = _html.unescape(txt).replace("**", "")
+    txt = re.sub(r"\s+-\s*(?=[A-Za-z0-9])", "\n- ", txt)     # inline "-item" -> bullet line
+    emoji = re.compile("[\U0001F000-\U0001FAFF\U00002600-\U000027BF\U0001F1E6-\U0001F1FF\U00002B00-\U00002BFF\U00002190-\U000021FF\U0000FE0F\U00002028-\U0000202F]")
+    HEADS = re.compile(r"^(product features|features|care instructions|care|details|materials?|sizing|fit)\s*:?\s*$", re.I)
+    blocks, skip = [], False
+    for line in txt.split("\n"):
+        l = emoji.sub("", line)
+        l = re.sub(r"\s+", " ", l).strip()
+        if re.search(r"return policy|returns are|refund|contact us within", l, re.I):
+            skip = True
+        if skip or not l:
+            continue
+        if l.startswith("- "):
+            item = l[2:].strip(" :-")
+            if item:
+                blocks.append({"t": "li", "x": item})
+        elif HEADS.match(l) or (len(l) < 42 and l.rstrip().endswith(":")):
+            h = l.rstrip(": ").strip()
+            if h:
+                blocks.append({"t": "h", "x": h})
+        else:
+            l = re.sub(r"^\s*(?:Product Overview|Overview|Product Features|Features)\s*:\s*", "", l, flags=re.I)
+            if len(l) > 2:
+                blocks.append({"t": "p", "x": l})
+    return blocks
+
 catalog = []
 for slug, handle, cat in HANDLES:
     try:
@@ -62,6 +94,7 @@ for slug, handle, cat in HANDLES:
     prices = []
     sizes_seen = []
     colors_order = []
+    size_price = {}
     for v in d["variants"]:
         opts = v["options"]
         color = opts[color_idx] if color_idx is not None else None
@@ -70,6 +103,7 @@ for slug, handle, cat in HANDLES:
         if v.get("available"): prices.append(v["price"])
         if size and size not in sizes_seen: sizes_seen.append(size)
         if color and color not in colors_order: colors_order.append(color)
+        if size: size_price[size] = min(size_price.get(size, 10**9), v["price"])
     if not prices:
         prices = [v["price"] for v in d["variants"]]
 
@@ -128,6 +162,8 @@ for slug, handle, cat in HANDLES:
         "price_min": min(prices)/100.0,
         "price_max": max(prices)/100.0,
         "sizes": sizes_seen,
+        "size_prices": {s: round(p/100.0, 2) for s, p in size_price.items()},
+        "desc": clean_desc(d.get("description")),
         "colors": colors,
     })
     print(f"OK {slug:26} colors={len(colors_order):2} sizes={len(sizes_seen)} "

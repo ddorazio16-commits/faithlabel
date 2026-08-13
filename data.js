@@ -6,6 +6,66 @@ window.PRODUCTS = [
 "title": "Christian Unisex Crewneck | Catholic Sweatshirt, Religious Gift for Him and Her",
 "cat": "crewneck",
 "price": 47.99,
+"sizePrices": {
+"S": 47.99,
+"M": 47.99,
+"L": 47.99,
+"XL": 47.99,
+"2XL": 49.99,
+"3XL": 49.99,
+"4XL": 49.99,
+"5XL": 49.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this \"Jesus King of Kings\" crewneck. Perfect for Sunday service or everyday wear, this sweatshirt seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this crewneck serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Faithful",
 "sizes": [
 "S",
@@ -91,6 +151,70 @@ window.PRODUCTS = [
 "title": "Christian Unisex Sweatshirt | Faith Over Fear Crewneck, Religious Gift for Him and Her",
 "cat": "crewneck",
 "price": 47.99,
+"sizePrices": {
+"S": 47.99,
+"M": 47.99,
+"L": 47.99,
+"XL": 47.99,
+"2XL": 49.99,
+"3XL": 49.99,
+"4XL": 49.99,
+"5XL": 49.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this \"Faith Over Fear\" crewneck. Perfect for Sunday service or everyday wear, this sweatshirt seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this sweatshirt serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Front + back design"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Faith over Fear",
 "sizes": [
 "S",
@@ -144,6 +268,66 @@ window.PRODUCTS = [
 "title": "Christian Unisex Sweatshirt | John 14:6 Crewneck, Religious Gift for Him and Her",
 "cat": "crewneck",
 "price": 47.99,
+"sizePrices": {
+"S": 47.99,
+"M": 47.99,
+"L": 47.99,
+"XL": 47.99,
+"2XL": 49.99,
+"3XL": 49.99,
+"4XL": 49.99,
+"5XL": 49.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this John 14:6 crewneck. Perfect for Sunday service or everyday wear, this sweatshirt seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this crewneck serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "John 14:6",
 "sizes": [
 "S",
@@ -205,6 +389,70 @@ window.PRODUCTS = [
 "title": "Crusader \"Deus Vult\" Hoodie | Catholic Unisex Sweatshirt, Faith Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this powerful crusader \"Deus Vult\" hoodie. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Front + back design"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Deus Vult",
 "sizes": [
 "S",
@@ -251,6 +499,70 @@ window.PRODUCTS = [
 "title": "Exodus 14:14 Hoodie | Catholic Unisex Sweatshirt, Faith Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this cozy scripture hoodie, inspired by Exodus 14:14. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Front + back design"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Exodus 14:14",
 "sizes": [
 "S",
@@ -322,6 +634,70 @@ window.PRODUCTS = [
 "title": "Exodus 14:14 Hoodie | Catholic Unisex Sweatshirt, Faith Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this cozy scripture hoodie, inspired by Exodus 14:14. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Front + back design"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Exodus 14:14",
 "sizes": [
 "S",
@@ -406,6 +782,66 @@ window.PRODUCTS = [
 "title": "Faith Over Fear Crewneck | Christian Sweatshirt, Religious Gift for Him and Her",
 "cat": "crewneck",
 "price": 47.99,
+"sizePrices": {
+"S": 47.99,
+"M": 47.99,
+"L": 47.99,
+"XL": 47.99,
+"2XL": 49.99,
+"3XL": 49.99,
+"4XL": 49.99,
+"5XL": 49.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this Catholic \"Faith Over Fear\" crewneck. Perfect for Sunday service or everyday wear, this sweatshirt seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this crewneck serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Faith over Fear",
 "sizes": [
 "S",
@@ -491,6 +927,70 @@ window.PRODUCTS = [
 "title": "Faith Over Fear Hoodie | Catholic Unisex Sweatshirt, Faith Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this \"Faith Over Fear\" hoodie. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Front + back design"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Faith over Fear",
 "sizes": [
 "S",
@@ -537,6 +1037,70 @@ window.PRODUCTS = [
 "title": "God is Good Hoodie | Christian Unisex Sweatshirt, Religious Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this \"God is Good\" Christian hoodie. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Front + back design"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "God is Good",
 "sizes": [
 "S",
@@ -590,6 +1154,70 @@ window.PRODUCTS = [
 "title": "Isaiah 43:19 Catholic Hoodie | Christian Unisex Sweatshirt, Faith Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this cozy catholic hoodie, inspired by Isaiah 43:19. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Front + back design"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Isaiah 43:19",
 "sizes": [
 "S",
@@ -645,6 +1273,44 @@ window.PRODUCTS = [
 "title": "Jesus King of Kings T-Shirt | Christian Tie-Dye Tee, Religious Gift for Him and Her",
 "cat": "tshirt",
 "price": 35.99,
+"sizePrices": {
+"S": 35.99,
+"M": 35.99,
+"L": 35.99,
+"XL": 35.99,
+"2XL": 38.99,
+"3XL": 39.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Share your faith boldly with this Jesus \"King of Kings\" Tie Dye T-shirt. Designed for everyday wear, it combines comfort, quality, and purpose, making it perfect for believers who want to wear their faith with confidence. Perfect For: Church, youth groups, and worship events Gifts for friends, family, or ministry leaders Faith-based encouragement and outreach"
+},
+{
+"t": "p",
+"x": "Soft 100% Airlume combed and ringspun COTTON"
+},
+{
+"t": "p",
+"x": "Unisex fit — flattering for men and women alike High-quality print that won’t fade Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+}
+],
 "verse": "King of Kings",
 "sizes": [
 "S",
@@ -692,6 +1358,70 @@ window.PRODUCTS = [
 "title": "John 14:6 Faith Hoodie | Catholic Unisex Sweatshirt, Meaningful Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this Christian scripture hoodie, inspired by John 14:6. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Front + back design"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "John 14:6",
 "sizes": [
 "S",
@@ -777,6 +1507,70 @@ window.PRODUCTS = [
 "title": "Matthew 19:26 Hoodie | Catholic Unisex Sweatshirt, Faith Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this cozy scripture hoodie, inspired by Matthew 19:26. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Front + back design"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Matthew 19:26",
 "sizes": [
 "S",
@@ -846,6 +1640,66 @@ window.PRODUCTS = [
 "title": "Philippians 4:13 Hoodie | Christian Unisex Sweatshirt, Religious Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this Philippians 4:13 hoodie. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Philippians 4:13",
 "sizes": [
 "S",
@@ -914,6 +1768,66 @@ window.PRODUCTS = [
 "title": "Proverbs 3:5 Hoodie | Catholic Unisex Sweatshirt, Faith Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this Proverbs 3:5 Hoodie. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Proverbs 3:5",
 "sizes": [
 "S",
@@ -999,6 +1913,70 @@ window.PRODUCTS = [
 "title": "Psalm 23:1 Hoodie | Catholic Unisex Sweatshirt, Faith Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this Christian faith hoodie, inspired by Psalm 23:1. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Front + back design"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Psalm 23:1",
 "sizes": [
 "S",
@@ -1081,6 +2059,66 @@ window.PRODUCTS = [
 "title": "Trust in God Christian Hoodie | Catholic Unisex Sweatshirt, Religious Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this Catholic \"Trust in God\" hoodie. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Trust in God",
 "sizes": [
 "S",
@@ -1151,6 +2189,70 @@ window.PRODUCTS = [
 "title": "Walk by Faith Hoodie | Catholic Unisex Sweatshirt, Faith Gift for Him and Her",
 "cat": "hoodie",
 "price": 52.99,
+"sizePrices": {
+"S": 52.99,
+"M": 52.99,
+"L": 52.99,
+"XL": 52.99,
+"2XL": 54.99,
+"3XL": 55.99,
+"4XL": 55.99,
+"5XL": 55.99
+},
+"desc": [
+{
+"t": "p",
+"x": "Find strength and comfort in your faith with this cozy scripture hoodie, inspired by 2 Corinthians 5:7. Perfect for Sunday service or everyday wear, this hoodie seamlessly blends inspiration with comfort, conveying a message of faith in God. It makes a perfect faith-based gift for those who share your faith. Whether you’re gifting a loved one or expressing your own faith, this hoodie serves as a daily reminder of God’s promise."
+},
+{
+"t": "h",
+"x": "Product Features"
+},
+{
+"t": "li",
+"x": "Soft 80% cotton / 20% polyester blend"
+},
+{
+"t": "li",
+"x": "Front + back design"
+},
+{
+"t": "li",
+"x": "Unisex sizing for a relaxed fit"
+},
+{
+"t": "li",
+"x": "Durable print that won’t fade"
+},
+{
+"t": "li",
+"x": "Available in multiple colors and sizes (see chart)"
+},
+{
+"t": "h",
+"x": "Care Instructions"
+},
+{
+"t": "li",
+"x": "Machine wash cold (max 30°C / 90°F)"
+},
+{
+"t": "li",
+"x": "Tumble dry medium"
+},
+{
+"t": "li",
+"x": "Do not dry clean"
+},
+{
+"t": "li",
+"x": "Iron, steam, or dry: low heat"
+},
+{
+"t": "li",
+"x": "Non-chlorine: bleach as needed"
+}
+],
 "verse": "Walk by Faith",
 "sizes": [
 "S",
