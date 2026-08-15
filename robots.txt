@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ddorazio16-commits.github.io/faithlabel/sitemap.xml

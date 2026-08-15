@@ -19,6 +19,13 @@ HEAD = """<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title} — FaithLabel</title>
   <meta name="description" content="{desc}" />
+  <meta name="theme-color" content="#163BA1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="FaithLabel" />
+  <meta property="og:title" content="{title} — FaithLabel" />
+  <meta property="og:description" content="{desc}" />
+  <meta property="og:image" content="https://ddorazio16-commits.github.io/faithlabel/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
