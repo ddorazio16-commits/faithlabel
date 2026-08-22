@@ -142,20 +142,19 @@ shipping = f"""
 <p>Thank you for supporting a small faith-driven brand. Here&rsquo;s what to expect after you order.</p>
 
 <h2>Made to order</h2>
-<p>Each item is printed for you individually, so orders aren&rsquo;t shipped from a warehouse shelf. Please allow <strong>2&ndash;5 business days</strong> for production before your order ships.</p>
+<p>Each item is printed for you individually, so orders aren&rsquo;t shipped from a warehouse shelf — there&rsquo;s a short production time before your order ships.</p>
 
 <h2>Shipping times &amp; cost</h2>
 <ul>
-  <li>After production, delivery typically takes <strong>3&ndash;7 business days</strong> within the U.S.; international times vary.</li>
-  <li><strong>Complimentary shipping on orders over $75.</strong> Otherwise, shipping is calculated at checkout.</li>
+  <li>Shipping cost and estimated delivery are shown at checkout, based on the item and your location.</li>
   <li>You&rsquo;ll receive tracking by email as soon as your order is on its way.</li>
 </ul>
 
 <h2>Returns &amp; replacements</h2>
 <p>Because every piece is made to order, we don&rsquo;t accept returns for buyer&rsquo;s remorse or an incorrectly chosen size — please use the size guide on each product page before ordering. However, your satisfaction matters:</p>
 <ul>
-  <li>If your item arrives <strong>damaged, defective, or misprinted</strong>, contact us within <strong>7 days</strong> of delivery with a photo and your order number, and we&rsquo;ll make it right with a free replacement or refund.</li>
-  <li>If a package is lost in transit, reach out and we&rsquo;ll help track it down or reprint it.</li>
+  <li>If your item arrives <strong>damaged, defective, or misprinted</strong>, contact us with a photo and your order number and we&rsquo;ll make it right.</li>
+  <li>If a package is lost in transit, reach out and we&rsquo;ll help track it down.</li>
   <li>Orders returned due to an incorrect address provided at checkout may require reshipping at additional cost.</li>
 </ul>
 
@@ -173,10 +172,10 @@ contact = f"""
 </ul>
 
 <h2>Order questions</h2>
-<p>If your message is about an existing order, please include your <strong>order number</strong> (and a photo, if something arrived damaged) so we can help right away. See our <a href="shipping-returns.html">Shipping &amp; Returns</a> page for timelines and our replacement policy.</p>
+<p>If your message is about an existing order, please include your <strong>order number</strong> (and a photo, if something arrived damaged) so we can help right away. See our <a href="shipping-returns.html">Shipping &amp; Returns</a> page for our replacement policy.</p>
 
 <h2>Response time</h2>
-<p>We&rsquo;re a small, faith-driven team and typically reply within 1&ndash;2 business days. Thank you for your patience &mdash; and for wearing your faith boldly.</p>
+<p>We&rsquo;re a small, faith-driven team and reply as soon as we can. Thank you for your patience &mdash; and for wearing your faith boldly.</p>
 """
 
 PAGES = {
