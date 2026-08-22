@@ -9,7 +9,7 @@ FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox
            "%3Crect width='32' height='32' rx='7' fill='%23163BA1'/%3E%3Cpath d='M16 6v20M9 13h14' "
            "stroke='%23C8A24C' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E")
 UPDATED = "August 13, 2026"
-EMAIL = "hello@faithlabel.shop"   # ← update to your real store email
+EMAIL = "dorazioadelina@gmail.com"
 IG = "https://www.instagram.com/faithlabelshop"
 
 HEAD = """<!DOCTYPE html>
@@ -131,7 +131,7 @@ terms = f"""
 <p>The store and its products are provided &ldquo;as is.&rdquo; To the fullest extent permitted by law, FaithLabel is not liable for indirect or incidental damages, and our total liability for any order is limited to the amount you paid for it.</p>
 
 <h2>Governing law</h2>
-<p>These terms are governed by the laws of your store&rsquo;s home state/country <em>(update this with your jurisdiction before launch)</em>, without regard to conflict-of-law rules.</p>
+<p>These terms are governed by the laws of the State of New York, United States, without regard to conflict-of-law rules.</p>
 
 <h2>Changes &amp; contact</h2>
 <p>We may update these terms; the date above shows the latest revision. Questions? Email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
