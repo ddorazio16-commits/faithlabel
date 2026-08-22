@@ -24,7 +24,7 @@ HEAD = """<!DOCTYPE html>
   <meta property="og:site_name" content="FaithLabel" />
   <meta property="og:title" content="{title} — FaithLabel" />
   <meta property="og:description" content="{desc}" />
-  <meta property="og:image" content="https://ddorazio16-commits.github.io/faithlabel/assets/og-image.jpg" />
+  <meta property="og:image" content="https://faithlabelshop.com/assets/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

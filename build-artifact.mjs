@@ -80,7 +80,7 @@ body = body
   .replace(/<script src="app\.js[^"]*"><\/script>/, '')
   // policy pages aren't embedded in the single file — point them at the live site
   .replace(/href="(privacy|terms|shipping-returns|contact)\.html"/g,
-           'href="https://ddorazio16-commits.github.io/faithlabel/$1.html" target="_blank" rel="noopener"');
+           'href="https://faithlabelshop.com/$1.html" target="_blank" rel="noopener"');
 
 const page =
 `<meta charset="utf-8">
