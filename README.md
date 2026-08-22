@@ -81,45 +81,33 @@ Each entry:
 - Images are looked up by `slug`: `assets/products/<slug>.jpg` (main) and
   `<slug>-alt.jpg` (hover). Filter counts update automatically.
 
-## Connecting Printify (later, with API keys)
+## Checkout (live — via Shopify)
 
-The frontend is already wired for it — the checkout builds a real order payload;
-you just add the backend that talks to Printify.
+Checkout hands the cart off to the connected Shopify store, which takes
+payment and triggers Printify fulfillment. No backend or API keys live in
+this site.
 
-**Important:** a Printify API token must **never** live in this frontend. Keep it
-server-side. The site calls *your* endpoint, and your endpoint calls Printify.
+**How it works:** each product in `data.js` carries a `variants` map of
+`"Color|Size" → Shopify variant id` (pulled by `scrape-variants.py`). When a
+shopper clicks **Proceed to Checkout**, `app.js` builds a Shopify *cart
+permalink* and redirects there:
 
-1. **Get your keys.** In Printify → *My Profile → Connections*, create a
-   Personal Access Token. Note your **Shop ID** (Printify API `/v1/shops.json`).
+```
+https://<SHOP>/cart/<variantId>:<qty>,<variantId>:<qty>
+```
 
-2. **Add each product's Printify id.** Put the Printify product id in the
-   `printifyId` field for every entry in the `PRODUCTS` array in `app.js`.
+Shopify adds the items, runs its secure checkout, and (because the store has
+Printify connected) the paid order is produced and shipped automatically.
 
-3. **Stand up a tiny backend** (serverless function is fine) that receives the
-   cart payload the site already sends and creates the order. The frontend POSTs
-   this to `PRINTIFY.checkoutEndpoint` (default `/api/printify/checkout`):
+**Config:** the store domain is the `SHOP` constant near the top of `app.js`:
 
-   ```json
-   { "line_items": [ { "slug": "...", "color": "Navy", "size": "XL",
-                       "quantity": 2, "printify_product_id": "..." } ],
-     "subtotal": 148.97 }
-   ```
+```js
+const SHOP = 'w2fb1a-q3.myshopify.com';
+```
 
-   Your function calls Printify with your token
-   (`Authorization: Bearer <token>`), e.g. `POST /v1/shops/{shop_id}/orders.json`,
-   and returns `{ "checkout_url": "https://…" }`.
-
-   > Many stores route fulfilment through Shopify/Etsy connected to Printify
-   > rather than raw order creation — either way, this endpoint is the seam.
-
-4. **Flip the switch.** In `app.js`, set:
-
-   ```js
-   const PRINTIFY = { connected: true, checkoutEndpoint: '/api/printify/checkout', shopId: 'YOUR_SHOP_ID' };
-   ```
-
-   Until `connected` is `true`, the checkout button explains that keys aren't
-   connected yet (and logs the exact payload it *would* send to the console).
+If you move Shopify to a custom domain (e.g. `faithlabel.com`), update `SHOP`
+to that domain and redeploy. If products change, re-run
+`scrape-variants.py && gen-data.py` to refresh the variant ids.
 
 ## Refreshing the product images
 
