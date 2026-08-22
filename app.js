@@ -17,7 +17,10 @@ window.addEventListener('pageshow', () => window.scrollTo(0, 0));
 
 const PRODUCTS = window.PRODUCTS || [];
 const CAT_LABEL = { hoodie:'Hoodie', crewneck:'Crewneck', tshirt:'T-Shirt' };
-const PRINTIFY = { connected:false, checkoutEndpoint:'/api/printify/checkout', shopId:'' };
+/* Shopify store that handles payment + Printify fulfillment. Checkout hands
+   the cart off here via a cart permalink. Change this if you move to a custom
+   domain (e.g. 'faithlabel.com'). */
+const SHOP = 'w2fb1a-q3.myshopify.com';
 
 /* ---- helpers ---- */
 const $  = (s, r=document) => r.querySelector(s);
@@ -428,30 +431,29 @@ function bumpCart(){
 }
 
 /* ============================================================
-   Checkout — Printify seam
+   Checkout — hands off to the Shopify cart, which takes payment
+   and triggers Printify fulfillment. Builds a cart permalink:
+   https://<shop>/cart/<variantId>:<qty>,<variantId>:<qty>
    ============================================================ */
-$('#checkoutBtn').addEventListener('click', async () => {
-  const payload = {
-    line_items: cart.map(l => ({ slug:l.slug, color:l.color, size:l.size, quantity:l.qty, printify_product_id: bySlug(l.slug).printifyId || '' })),
-    subtotal: cart.reduce((s,l)=> s + priceFor(bySlug(l.slug), l.size) * l.qty, 0),
-  };
-  if(!PRINTIFY.connected){
-    console.info('[FaithLabel] Printify order payload (ready to POST to %s):', PRINTIFY.checkoutEndpoint, payload);
-    toast('Checkout is wired up — add your Printify API keys to go live.');
-    return;
+function shopifyCheckoutURL(){
+  const parts = [];
+  const missing = [];
+  for(const l of cart){
+    const p = bySlug(l.slug);
+    const vid = p && p.variants && p.variants[`${l.color}|${l.size}`];
+    if(vid) parts.push(`${vid}:${l.qty}`);
+    else missing.push(`${splitTitle(p ? p.title : l.slug).main} (${l.color}/${l.size})`);
   }
-  try{
-    $('#checkoutBtn').textContent = 'Redirecting…';
-    const res = await fetch(PRINTIFY.checkoutEndpoint, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
-    if(!res.ok) throw new Error(`checkout HTTP ${res.status}`);
-    const data = await res.json();
-    if(!data.checkout_url) throw new Error('no checkout_url in response');
-    window.location.href = data.checkout_url;
-  }catch(err){
-    console.error('[FaithLabel] checkout failed:', err);
-    toast(/HTTP [45]/.test(String(err)) ? 'Checkout was rejected — please try again.' : 'We could not reach checkout. Check your connection.');
-    $('#checkoutBtn').textContent = 'Proceed to Checkout';
-  }
+  return { url: parts.length ? `https://${SHOP}/cart/${parts.join(',')}` : null, missing };
+}
+
+$('#checkoutBtn').addEventListener('click', () => {
+  if(!cart.length){ toast('Your cart is empty.'); return; }
+  const { url, missing } = shopifyCheckoutURL();
+  if(missing.length) console.warn('[FaithLabel] no variant id for:', missing);
+  if(!url){ toast('Sorry — we couldn’t start checkout for these items.'); return; }
+  $('#checkoutBtn').textContent = 'Taking you to checkout…';
+  window.location.href = url;
 });
 
 /* ============================================================

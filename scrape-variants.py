@@ -95,6 +95,7 @@ for slug, handle, cat in HANDLES:
     sizes_seen = []
     colors_order = []
     size_price = {}
+    variant_ids = {}   # "Color|Size" -> Shopify variant id (for cart-permalink checkout)
     for v in d["variants"]:
         opts = v["options"]
         color = opts[color_idx] if color_idx is not None else None
@@ -104,6 +105,7 @@ for slug, handle, cat in HANDLES:
         if size and size not in sizes_seen: sizes_seen.append(size)
         if color and color not in colors_order: colors_order.append(color)
         if size: size_price[size] = min(size_price.get(size, 10**9), v["price"])
+        if color and size: variant_ids[f"{color}|{size}"] = v["id"]
     if not prices:
         prices = [v["price"] for v in d["variants"]]
 
@@ -163,6 +165,7 @@ for slug, handle, cat in HANDLES:
         "price_max": max(prices)/100.0,
         "sizes": sizes_seen,
         "size_prices": {s: round(p/100.0, 2) for s, p in size_price.items()},
+        "variants": variant_ids,
         "desc": clean_desc(d.get("description")),
         "colors": colors,
     })
