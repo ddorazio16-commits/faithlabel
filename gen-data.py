@@ -87,7 +87,7 @@ for p in cat:
 
 with open(f"{ROOT}/data.js", "w") as f:
     f.write("/* Auto-generated from the source store — 18 products with full variants.\n")
-    f.write("   Regenerate: python3 scrape-variants.py && python3 gen-data.py */\n")
+    f.write("   Regenerate: python3 scrape-variants.py && python3 build-colormap.py && python3 gen-data.py */\n")
     f.write("window.PRODUCTS = " + json.dumps(products, ensure_ascii=False, indent=0) + ";\n")
 
 with open(f"{ROOT}/dl-manifest.tsv", "w") as f:

@@ -4,7 +4,7 @@
    print-on-demand apparel store — review before launch."""
 import os
 ROOT = "/Users/donatodorazio/faithlabel"
-V = "legal1"
+V = "1787433778"
 FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E"
            "%3Crect width='32' height='32' rx='7' fill='%23163BA1'/%3E%3Cpath d='M16 6v20M9 13h14' "
            "stroke='%23C8A24C' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E")
@@ -31,6 +31,7 @@ HEAD = """<!DOCTYPE html>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=%s" />
   <link rel="icon" href="%s" />
+  <script src="analytics.js" defer></script>
 </head>
 <body>
   <header class="legal-header">

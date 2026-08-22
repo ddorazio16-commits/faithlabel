@@ -3,7 +3,7 @@
    Data comes from data.js (window.PRODUCTS) — 18 products, each with
    colors (swatch + gallery) and sizes.
    Features: friendly filter, product-detail modal (color/size/gallery),
-   variant-aware cart, weekly verse, Printify checkout seam.
+   variant-aware cart, weekly verse, Shopify checkout handoff (Printify fulfils).
    ============================================================ */
 
 document.documentElement.classList.add('js');
@@ -72,8 +72,8 @@ function cardHTML(p){
            data-search="${(p.title + ' ' + p.verse).toLowerCase().replace(/"/g,'&quot;')}">
     <div class="card__media">
       <span class="card__tag">${CAT_LABEL[p.cat]}</span>
-      <img class="card__img card__img--main" src="${p.img}" alt="${escAttr(main)}" loading="lazy" />
-      <img class="card__img card__img--alt" src="${p.imgAlt}" alt="" loading="lazy" aria-hidden="true" />
+      <img class="card__img card__img--main" src="${p.img}" alt="${escAttr(main)}" loading="lazy" decoding="async" />
+      <img class="card__img card__img--alt" data-alt="${p.imgAlt}" alt="" loading="lazy" decoding="async" aria-hidden="true" />
       <span class="card__quick">Select Options</span>
     </div>
     <div class="card__body">
@@ -95,6 +95,14 @@ grid.addEventListener('click', e => {
   const card = e.target.closest('.card[data-open]');
   if(card) openPDP(card.dataset.open);
 });
+/* load each card's hover image only when it's actually needed (saves ~2MB) */
+function loadAltImage(e){
+  const card = e.target.closest('.card'); if(!card) return;
+  const alt = card.querySelector('.card__img--alt');
+  if(alt && !alt.getAttribute('src') && alt.dataset.alt) alt.src = alt.dataset.alt;
+}
+grid.addEventListener('mouseover', loadAltImage);
+grid.addEventListener('focusin', loadAltImage);
 
 /* counts */
 const counts = PRODUCTS.reduce((a,p)=>{ a.all++; a[p.cat]=(a[p.cat]||0)+1; return a; }, {all:0});
@@ -139,7 +147,13 @@ function applyFilter(){
     const match = (cat === 'all' || c.dataset.cat === cat) &&
                   (q === '' || c.dataset.search.includes(q));
     c.dataset.match = match;
-    if(match){ visible++; if(c.style.display === 'none') c.style.display = ''; }
+    if(match){
+      visible++;
+      if(c.style.display === 'none') c.style.display = '';
+      // a re-matched card may still be mid-hide — cancel it and un-hide,
+      // otherwise rapid filter changes leave cards stuck invisible.
+      clearTimeout(c._hideT); c.classList.remove('is-hiding');
+    }
   });
 
   const last = new Map();
@@ -162,7 +176,8 @@ function applyFilter(){
   cards.forEach(c => {
     if(c.dataset.match !== 'true' && c.style.display !== 'none'){
       c.classList.add('is-hiding');
-      setTimeout(() => { if(c.dataset.match !== 'true'){ c.style.display = 'none'; c.classList.remove('is-hiding'); } }, 320);
+      clearTimeout(c._hideT);
+      c._hideT = setTimeout(() => { if(c.dataset.match !== 'true'){ c.style.display = 'none'; c.classList.remove('is-hiding'); } }, 460);
     }
   });
   empty.hidden = visible > 0;
@@ -199,11 +214,39 @@ setTimeout(movePill, 300);
    ============================================================ */
 const pdp = $('#pdp'), pdpOverlay = $('#pdpOverlay');
 let pdpState = { slug:null, color:null, size:null, qty:1 };
+let pdpSwapTimer = null;
+const hasVariant = (p, color, size) => !!(p && p.variants && p.variants[`${color}|${size}`]);
 
 function setPdpPrice(p){
   $('#pdpPrice').innerHTML = pdpState.size
     ? money(priceFor(p, pdpState.size))
     : `<span>From</span> ${money(p.price)}`;
+}
+
+/* size buttons reflect real availability: some color+size combos don't exist
+   as variants, so they're disabled (and can never reach a broken checkout). */
+function renderSizes(p){
+  $('#pdpSizes').innerHTML = p.sizes.map(s => {
+    const ok = hasVariant(p, pdpState.color, s);
+    const active = s === pdpState.size ? ' is-active' : '';
+    return `<button class="size-btn${ok ? '' : ' is-unavailable'}${active}" data-size="${s}"`
+         + `${ok ? '' : ' disabled aria-disabled="true" title="Unavailable in this color"'}>${s}</button>`;
+  }).join('');
+}
+
+/* one place to swap the main image — cancels any pending swap (no race),
+   crossfades, and clears a prior load-error opacity so it never stays blank. */
+function setMainImage(src, alt){
+  const mainImg = $('#pdpMainImg');
+  clearTimeout(pdpSwapTimer);
+  mainImg.classList.add('is-swapping');
+  pdpSwapTimer = setTimeout(() => {
+    if(src) mainImg.src = src;
+    if(alt != null) mainImg.alt = alt;
+    mainImg.style.opacity = '';
+    delete mainImg.dataset.err;
+    mainImg.classList.remove('is-swapping');
+  }, 140);
 }
 
 function openPDP(slug){
@@ -227,9 +270,7 @@ function openPDP(slug){
              data-color="${c.name}" title="${c.name}" aria-label="${c.name}"></button>`).join('');
   $('#pdpColorName').textContent = pdpState.color;
 
-  $('#pdpSizes').innerHTML = p.sizes.map(s =>
-    `<button class="size-btn" data-size="${s}">${s}</button>`).join('');
-
+  renderSizes(p);
   setGallery(p, pdpState.color);
 
   pdpOverlay.hidden = false;
@@ -244,15 +285,9 @@ function openPDP(slug){
 function setGallery(p, colorName){
   const c = colorOf(p, colorName);
   const imgs = (c && c.images && c.images.length) ? c.images : [p.img].filter(Boolean);
-  const mainImg = $('#pdpMainImg');
-  mainImg.classList.add('is-swapping');
-  setTimeout(() => {
-    if(imgs[0]) mainImg.src = imgs[0];
-    mainImg.alt = `${splitTitle(p.title).main} — ${colorName}`;
-    mainImg.classList.remove('is-swapping');
-  }, 160);
+  setMainImage(imgs[0], `${splitTitle(p.title).main} — ${colorName}`);
   $('#pdpThumbs').innerHTML = imgs.map((src,i) =>
-    `<button class="${i===0?'is-active':''}" data-img="${src}" aria-label="View image ${i+1}"><img src="${src}" alt="" loading="lazy"></button>`).join('');
+    `<button class="${i===0?'is-active':''}" data-img="${src}" aria-label="View image ${i+1}"><img src="${src}" alt="" loading="lazy" decoding="async"></button>`).join('');
 }
 
 function closePDP(){
@@ -269,11 +304,15 @@ pdp.addEventListener('click', e => {
     pdpState.color = sw.dataset.color;
     $$('.swatch', pdp).forEach(x => x.classList.toggle('is-active', x===sw));
     $('#pdpColorName').textContent = pdpState.color;
-    setGallery(bySlug(pdpState.slug), pdpState.color);
+    const p = bySlug(pdpState.slug);
+    if(pdpState.size && !hasVariant(p, pdpState.color, pdpState.size)){ pdpState.size = null; setPdpPrice(p); }
+    renderSizes(p);
+    setGallery(p, pdpState.color);
     return;
   }
   const sz = e.target.closest('.size-btn');
   if(sz){
+    if(sz.disabled || sz.classList.contains('is-unavailable')) return;
     pdpState.size = sz.dataset.size;
     $$('.size-btn', pdp).forEach(x => x.classList.toggle('is-active', x===sz));
     setPdpPrice(bySlug(pdpState.slug));
@@ -282,23 +321,21 @@ pdp.addEventListener('click', e => {
   }
   const th = e.target.closest('#pdpThumbs button');
   if(th){
-    $('#pdpMainImg').src = th.dataset.img;
+    setMainImage(th.dataset.img);
     $$('#pdpThumbs button', pdp).forEach(x => x.classList.toggle('is-active', x===th));
     return;
   }
   const q = e.target.closest('[data-q]');
   if(q){
-    pdpState.qty = Math.max(1, pdpState.qty + Number(q.dataset.q));
+    pdpState.qty = Math.min(20, Math.max(1, pdpState.qty + Number(q.dataset.q)));
     $('#pdpQtyVal').textContent = pdpState.qty;
     return;
   }
 });
 $('#pdpAdd').addEventListener('click', () => {
-  if(!pdpState.size){
-    $('#pdpSizeHint').hidden = false;
-    toast('Please choose a size.');
-    return;
-  }
+  const p = bySlug(pdpState.slug);
+  if(!pdpState.size){ $('#pdpSizeHint').hidden = false; toast('Please choose a size.'); return; }
+  if(!hasVariant(p, pdpState.color, pdpState.size)){ toast('That size is sold out in this color.'); return; }
   addToCart(pdpState.slug, pdpState.color, pdpState.size, pdpState.qty);
   closePDP();
   openCart();
@@ -330,7 +367,7 @@ function loadCart(){
   // catalog is regenerated) so a stale cart can never crash render or checkout.
   const clean = raw.filter(l => {
     const p = l && bySlug(l.slug);
-    return p && p.colors.some(c => c.name === l.color) && p.sizes.includes(l.size)
+    return p && hasVariant(p, l.color, l.size)
       && Number.isFinite(l.qty) && l.qty > 0;
   });
   if(clean.length !== raw.length){
@@ -351,7 +388,7 @@ function addToCart(slug, color, size, qty=1){
 function changeQty(key, delta){
   const line = cart.find(l => keyOf(l) === key);
   if(!line) return;
-  line.qty += delta;
+  line.qty = Math.min(20, line.qty + delta);
   if(line.qty <= 0) cart = cart.filter(l => keyOf(l) !== key);
   saveCart(); renderCart();
 }
@@ -450,7 +487,12 @@ function shopifyCheckoutURL(){
 $('#checkoutBtn').addEventListener('click', () => {
   if(!cart.length){ toast('Your cart is empty.'); return; }
   const { url, missing } = shopifyCheckoutURL();
-  if(missing.length) console.warn('[FaithLabel] no variant id for:', missing);
+  // never silently drop an item — if anything is unavailable, stop and say so
+  if(missing.length){
+    console.warn('[FaithLabel] no variant id for:', missing);
+    toast(`Unavailable: ${missing[0]}. Please remove it to check out.`);
+    return;
+  }
   if(!url){ toast('Sorry — we couldn’t start checkout for these items.'); return; }
   $('#checkoutBtn').textContent = 'Taking you to checkout…';
   window.location.href = url;
@@ -502,19 +544,22 @@ const VERSES = [
    Header scroll + hero parallax
    ============================================================ */
 const header = $('#header'), controls = $('#controls'), heroImg = $('#heroImg');
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let ticking = false;
+let headerH = readHeaderH();
+function readHeaderH(){ return parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 72; }
+window.addEventListener('resize', () => { headerH = readHeaderH(); });
 function onScroll(){
   if(ticking) return; ticking = true;
   requestAnimationFrame(() => {
     const y = window.scrollY;
-    header.classList.toggle('is-scrolled', y > 12);
-    const cTop = controls.getBoundingClientRect().top;
-    controls.classList.toggle('is-stuck', cTop <= (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) + 10));
-    if(y < window.innerHeight){ heroImg.style.transform = `translateY(${y * 0.28}px) scale(1.06)`; }
+    header.classList.toggle('is-scrolled', y > 12);                       // always (works with reduced motion)
+    controls.classList.toggle('is-stuck', controls.getBoundingClientRect().top <= headerH + 10);
+    if(!reduceMotion && y < window.innerHeight){ heroImg.style.transform = `translateY(${y * 0.28}px) scale(1.06)`; }
     ticking = false;
   });
 }
-if(!matchMedia('(prefers-reduced-motion: reduce)').matches) window.addEventListener('scroll', onScroll, { passive:true });
+window.addEventListener('scroll', onScroll, { passive:true });
 
 /* ============================================================
    Reveal on scroll
@@ -526,7 +571,6 @@ $$('.reveal').forEach((el,i) => {
   if(el.classList.contains('card')) el.style.transitionDelay = (Math.min(i,8) * 45) + 'ms';
   io.observe(el);
 });
-$$('#hero .reveal').forEach((el,i) => { io.unobserve(el); setTimeout(() => el.classList.add('is-in'), 140 + i * 130); });
 window.addEventListener('load', () => {
   setTimeout(() => $$('.reveal:not(.is-in)').forEach(el => { if(el.getBoundingClientRect().top < innerHeight) el.classList.add('is-in'); }), 600);
 });
@@ -545,8 +589,10 @@ $$('#mobileNav a').forEach(a => a.addEventListener('click', closeMobileNav));
    page (verse bar + hero), same as a refresh — closing any open panels. */
 $('a.brand')?.addEventListener('click', e => {
   e.preventDefault();
-  closePDP(); closeCart(); closeMobileNav();
-  window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  if(pdp.classList.contains('is-open')) closePDP();
+  if(cartEl.classList.contains('is-open')) closeCart();
+  closeMobileNav();
+  window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
 });
 
 $('#signupForm').addEventListener('submit', e => {

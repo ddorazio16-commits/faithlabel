@@ -35,7 +35,8 @@ faithlabel/
 ## Refreshing the catalog
 
 ```bash
-python3 scrape-variants.py   # fetch colors/sizes/images from the source store
+python3 scrape-variants.py   # fetch colors/sizes/variant IDs/images → catalog.json
+python3 build-colormap.py    # merge the per-image color classification → color-map.json
 python3 gen-data.py          # build data.js + the image download manifest
 ./download-variants.sh       # download + optimise every gallery image
 ```
@@ -68,18 +69,20 @@ It's a static folder — drop it on any host:
 
 ## Editing the catalog
 
-All products live in the `PRODUCTS` array at the top of [`app.js`](app.js).
-Each entry:
+Product data is **generated** into [`data.js`](data.js) (`window.PRODUCTS`) by the
+pipeline above — `app.js` only reads it. Don't hand-edit `data.js`; change the
+source and regenerate. Each product looks like:
 
 ```js
 { slug:'psalm-231-hoodie', cat:'hoodie', price:52.99, verse:'Psalm 23:1',
-  title:'Psalm 23:1 Hoodie | Catholic Unisex Sweatshirt, Faith Gift for Him and Her',
-  printifyId:'' }
+  title:'Psalm 23:1 Hoodie | …', sizes:[…], sizePrices:{…},
+  variants:{ 'Navy|XL': 42519… }, colors:[{ name, swatch, images:[…] }], img, imgAlt }
 ```
 
 - `cat` drives the filter — one of `hoodie` / `crewneck` / `tshirt`.
-- Images are looked up by `slug`: `assets/products/<slug>.jpg` (main) and
-  `<slug>-alt.jpg` (hover). Filter counts update automatically.
+- `variants` maps `Color|Size` → Shopify variant id (used at checkout).
+- Grid image is `assets/products/<slug>.jpg` (+ `-alt.jpg` hover); PDP galleries
+  live in `assets/products/<slug>/`. Filter counts update automatically.
 
 ## Checkout (live — via Shopify)
 

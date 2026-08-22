@@ -112,9 +112,6 @@ for slug, handle, cat in HANDLES:
     # images per color (via variant_ids); also generic images (no variant_ids)
     color_imgs = {c: [] for c in colors_order}
     generic = []
-    for im in d["images"]:
-        # d["images"] may be list of strings OR dicts depending on endpoint; media has richer info
-        pass
     # Use media (has src + not variant map) plus variants' featured_image for color mapping
     # Build from variants' featured_image first (reliable color->image)
     color_first_img = {}
