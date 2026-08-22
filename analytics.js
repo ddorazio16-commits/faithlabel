@@ -3,7 +3,7 @@
  * Measurement ID (looks like G-XXXXXXXXXX), and paste it below. That's it —
  * every page already loads this file, so analytics goes live everywhere.
  * Leave GA_ID empty to keep analytics off. */
-window.GA_ID = ""; // e.g. "G-ABC1234XYZ"
+window.GA_ID = "G-5Y962KV05B";
 
 (function () {
   if (!window.GA_ID) return;
