@@ -500,8 +500,9 @@ input{ font-family:inherit; }
 
 /* ── Image zoom lightbox ───────────────────────────── */
 .zoom{ position:fixed; inset:0; z-index:200; display:grid; place-items:center;
-  background:rgba(8,18,40,.92); opacity:0; transition:opacity .35s var(--ease); }
-.zoom.is-open{ opacity:1; }
+  background:rgba(8,18,40,.92); opacity:0; pointer-events:none; transition:opacity .35s var(--ease); }
+.zoom[hidden]{ display:none; }
+.zoom.is-open{ opacity:1; pointer-events:auto; }
 .zoom__stage{ width:100%; height:100%; overflow:hidden; display:grid; place-items:center;
   touch-action:none; }
 .zoom__stage img{ max-width:94vw; max-height:92vh; width:auto; height:auto; object-fit:contain;
