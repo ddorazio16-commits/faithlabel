@@ -492,8 +492,32 @@ input{ font-family:inherit; }
   overflow:hidden; box-shadow:var(--shadow-sm);
 }
 .pdp__stage img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
-  transition:opacity .4s var(--ease); }
+  transition:opacity .4s var(--ease); cursor:zoom-in; }
 .pdp__stage img.is-swapping{ opacity:0; }
+.pdp__stage::after{ content:""; position:absolute; right:.7rem; bottom:.7rem; width:34px; height:34px;
+  border-radius:50%; background:rgba(14,36,86,.55) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M21 21l-4.3-4.3M11 8v6M8 11h6'/%3E%3C/svg%3E") center/18px no-repeat;
+  backdrop-filter:blur(2px); pointer-events:none; opacity:.9; }
+
+/* ── Image zoom lightbox ───────────────────────────── */
+.zoom{ position:fixed; inset:0; z-index:200; display:grid; place-items:center;
+  background:rgba(8,18,40,.92); opacity:0; transition:opacity .35s var(--ease); }
+.zoom.is-open{ opacity:1; }
+.zoom__stage{ width:100%; height:100%; overflow:hidden; display:grid; place-items:center;
+  touch-action:none; }
+.zoom__stage img{ max-width:94vw; max-height:92vh; width:auto; height:auto; object-fit:contain;
+  border-radius:4px; box-shadow:0 30px 80px rgba(0,0,0,.5); cursor:zoom-in;
+  transform:scale(1); transform-origin:center center; transition:transform .25s var(--ease);
+  user-select:none; -webkit-user-drag:none; will-change:transform; }
+.zoom__stage img.is-zoomed{ cursor:zoom-out; transition:transform .12s linear; }
+.zoom__close{ position:absolute; top:1rem; right:1rem; z-index:2; width:46px; height:46px;
+  border-radius:50%; display:grid; place-items:center; color:#fff;
+  background:rgba(255,255,255,.14); backdrop-filter:blur(6px); transition:background .3s, transform .3s; }
+.zoom__close:hover{ background:rgba(255,255,255,.28); transform:rotate(90deg); }
+.zoom__hint{ position:absolute; bottom:1.1rem; left:50%; transform:translateX(-50%);
+  color:rgba(255,255,255,.82); font-size:.78rem; letter-spacing:.02em; text-align:center;
+  background:rgba(0,0,0,.28); padding:.4rem .8rem; border-radius:999px; pointer-events:none;
+  transition:opacity .3s; }
+@media (max-width:640px){ .zoom__hint{ font-size:.7rem; } }
 .pdp__thumbs{ display:flex; gap:.6rem; flex-wrap:wrap; }
 .pdp__thumbs button{
   width:60px; height:60px; border-radius:var(--radius); overflow:hidden; background:#fff;

@@ -456,8 +456,75 @@ $('#cartToggle').addEventListener('click', openCart);
 $('#cartClose').addEventListener('click', closeCart);
 overlay.addEventListener('click', closeCart);
 $('#cartEmptyShop').addEventListener('click', () => { closeCart(); $('#collection').scrollIntoView({behavior:'smooth'}); });
+/* ============================================================
+   Image zoom lightbox — click the PDP main image to open a
+   full-screen view; click / scroll to zoom, move or drag to pan.
+   ============================================================ */
+const zoomEl = $('#zoom'), zoomImg = $('#zoomImg'), zoomStage = $('#zoomStage'), zoomHint = $('#zoomHint');
+let zScale = 1, zoomLastFocus = null;
+const ZMIN = 1, ZMAX = 4;
+
+function resetZoom(){
+  zScale = 1;
+  zoomImg.style.transform = 'scale(1)';
+  zoomImg.style.transformOrigin = 'center center';
+  zoomImg.classList.remove('is-zoomed');
+  if(zoomHint) zoomHint.style.opacity = '';
+}
+function zoomOrigin(cx, cy){
+  const r = zoomImg.getBoundingClientRect();
+  const x = Math.min(100, Math.max(0, ((cx - r.left) / r.width) * 100));
+  const y = Math.min(100, Math.max(0, ((cy - r.top) / r.height) * 100));
+  zoomImg.style.transformOrigin = `${x}% ${y}%`;
+}
+function zoomSet(s, cx, cy){
+  zScale = Math.min(ZMAX, Math.max(ZMIN, s));
+  if(cx != null) zoomOrigin(cx, cy);
+  zoomImg.style.transform = `scale(${zScale})`;
+  const on = zScale > 1.01;
+  zoomImg.classList.toggle('is-zoomed', on);
+  if(zoomHint) zoomHint.style.opacity = on ? '0' : '';
+  if(!on) zoomImg.style.transformOrigin = 'center center';
+}
+function openZoom(src, alt){
+  if(!src) return;
+  zoomLastFocus = document.activeElement;
+  zoomImg.src = src; zoomImg.alt = alt || '';
+  resetZoom();
+  zoomEl.hidden = false;
+  requestAnimationFrame(() => zoomEl.classList.add('is-open'));
+  zoomEl.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => $('#zoomClose').focus());
+}
+function closeZoom(){
+  zoomEl.classList.remove('is-open');
+  zoomEl.setAttribute('aria-hidden','true');
+  setTimeout(() => { zoomEl.hidden = true; zoomImg.removeAttribute('src'); }, 350);
+  if(!pdp.classList.contains('is-open')) document.body.style.overflow = '';
+  zoomLastFocus && zoomLastFocus.focus?.();
+}
+
+$('#pdpMainImg').addEventListener('click', () => {
+  const im = $('#pdpMainImg');
+  if(im.getAttribute('src')) openZoom(im.src, im.alt);
+});
+zoomImg.addEventListener('click', e => {
+  e.stopPropagation();
+  if(zScale > 1.01) resetZoom();
+  else zoomSet(2.5, e.clientX, e.clientY);
+});
+zoomStage.addEventListener('pointermove', e => { if(zScale > 1.01) zoomOrigin(e.clientX, e.clientY); });
+zoomStage.addEventListener('wheel', e => {
+  e.preventDefault();
+  zoomSet(zScale + (e.deltaY < 0 ? 0.4 : -0.4), e.clientX, e.clientY);
+}, { passive:false });
+zoomEl.addEventListener('click', e => { if(e.target === zoomEl || e.target === zoomStage) closeZoom(); });
+$('#zoomClose').addEventListener('click', closeZoom);
+
 document.addEventListener('keydown', e => {
   if(e.key === 'Escape'){
+    if(zoomEl && !zoomEl.hidden){ closeZoom(); return; }
     if(!sizeguide.hidden){ closeSizeGuide(); return; }
     if(pdp.classList.contains('is-open')){ closePDP(); return; }
     closeCart(); closeMobileNav();
