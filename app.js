@@ -68,8 +68,7 @@ const grid = $('#grid');
 function cardHTML(p){
   const { main, sub } = splitTitle(p.title);
   return `
-  <article class="card reveal" data-open="${p.slug}" data-cat="${p.cat}"
-           data-search="${(p.title + ' ' + p.verse).toLowerCase().replace(/"/g,'&quot;')}">
+  <article class="card reveal" data-open="${p.slug}" data-cat="${p.cat}">
     <div class="card__media">
       <span class="card__tag">${CAT_LABEL[p.cat]}</span>
       <img class="card__img card__img--main" src="${p.img}" alt="${escAttr(main)}" loading="lazy" decoding="async" />
@@ -114,7 +113,7 @@ $('#cTshirt').textContent = counts.tshirt || 0;
 /* ============================================================
    Filtering — pills + search, with FLIP motion
    ============================================================ */
-const state = { cat:'all', query:'' };
+const state = { cat:'all' };
 const filters = $('#filters');
 const pills = $$('.pill', filters);
 const pillBg = $('#pillBg');
@@ -137,15 +136,14 @@ function setCat(cat){
   applyFilter();
 }
 function applyFilter(){
-  const cat = state.cat, q = state.query.trim().toLowerCase();
+  const cat = state.cat;
   const cards = [...grid.children];
   const first = new Map();
   cards.forEach(c => { if(c.style.display !== 'none') first.set(c, c.getBoundingClientRect()); });
 
   let visible = 0;
   cards.forEach(c => {
-    const match = (cat === 'all' || c.dataset.cat === cat) &&
-                  (q === '' || c.dataset.search.includes(q));
+    const match = (cat === 'all' || c.dataset.cat === cat);
     c.dataset.match = match;
     if(match){
       visible++;
@@ -183,19 +181,6 @@ function applyFilter(){
   empty.hidden = visible > 0;
 }
 pills.forEach(p => p.addEventListener('click', () => setCat(p.dataset.filter)));
-
-/* search */
-const searchInput = $('#searchInput');
-const searchClear = $('#searchClear');
-searchInput.addEventListener('input', () => {
-  state.query = searchInput.value;
-  searchClear.hidden = !searchInput.value;
-  applyFilter();
-});
-searchClear.addEventListener('click', () => {
-  searchInput.value = ''; state.query = ''; searchClear.hidden = true;
-  applyFilter(); searchInput.focus();
-});
 
 /* deep links with data-filter (footer) */
 $$('[data-filter]').forEach(el => {
