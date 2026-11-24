@@ -144,69 +144,74 @@ window.PRODUCTS = [
 "name": "Ash",
 "swatch": "#E4E4E2",
 "images": [
-"assets/products/christian-unisex-crewneck/ash-concrete.jpg",
-"assets/products/christian-unisex-crewneck/ash-concrete-b.jpg"
+"assets/products/christian-unisex-crewneck/ash-front.jpg",
+"assets/products/christian-unisex-crewneck/ash-back.jpg"
 ]
 },
 {
 "name": "Dark Chocolate",
 "swatch": "#3A2A22",
 "images": [
-"assets/products/christian-unisex-crewneck/dark-chocolate-concrete.jpg",
-"assets/products/christian-unisex-crewneck/dark-chocolate-concrete-b.jpg"
+"assets/products/christian-unisex-crewneck/dark-chocolate-front.jpg",
+"assets/products/christian-unisex-crewneck/dark-chocolate-back.jpg"
 ]
 },
 {
 "name": "Light Pink",
 "swatch": "#E9C6CE",
 "images": [
-"assets/products/christian-unisex-crewneck/light-pink-concrete.jpg",
-"assets/products/christian-unisex-crewneck/light-pink-concrete-b.jpg"
+"assets/products/christian-unisex-crewneck/light-pink-front.jpg",
+"assets/products/christian-unisex-crewneck/light-pink-back.jpg"
 ]
 },
 {
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/christian-unisex-crewneck/navy-concrete.jpg",
-"assets/products/christian-unisex-crewneck/navy-concrete-b.jpg"
+"assets/products/christian-unisex-crewneck/navy-front.jpg",
+"assets/products/christian-unisex-crewneck/navy-back.jpg"
 ]
 },
 {
 "name": "Sand",
 "swatch": "#D8C9A4",
 "images": [
-"assets/products/christian-unisex-crewneck/sand-concrete.jpg",
-"assets/products/christian-unisex-crewneck/sand-concrete-b.jpg"
+"assets/products/christian-unisex-crewneck/sand-front.jpg",
+"assets/products/christian-unisex-crewneck/sand-back.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/christian-unisex-crewneck/white-concrete.jpg",
-"assets/products/christian-unisex-crewneck/white-concrete-b.jpg"
+"assets/products/christian-unisex-crewneck/white-front.jpg",
+"assets/products/christian-unisex-crewneck/white-back.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/christian-unisex-crewneck/black-concrete.jpg",
-"assets/products/christian-unisex-crewneck/black-concrete-b.jpg"
+"assets/products/christian-unisex-crewneck/black-front.jpg",
+"assets/products/christian-unisex-crewneck/black-back.jpg"
 ]
 },
 {
 "name": "Royal",
 "swatch": "#284C9E",
 "images": [
-"assets/products/christian-unisex-crewneck/royal-concrete.jpg",
-"assets/products/christian-unisex-crewneck/royal-concrete-b.jpg"
+"assets/products/christian-unisex-crewneck/royal-front.jpg",
+"assets/products/christian-unisex-crewneck/royal-back.jpg"
 ]
 }
 ],
-"img": "assets/products/christian-unisex-crewneck/ash-concrete.jpg",
-"imgAlt": "assets/products/christian-unisex-crewneck/ash-concrete-b.jpg"
+"img": "assets/products/christian-unisex-crewneck/dark-chocolate-front.jpg",
+"imgAlt": "assets/products/christian-unisex-crewneck/dark-chocolate-back.jpg",
+"sides": [
+"front",
+"back"
+],
+"heroColor": "Dark Chocolate"
 },
 {
 "slug": "faith-over-fear-crewneck-a",
@@ -327,37 +332,42 @@ window.PRODUCTS = [
 "name": "Ash",
 "swatch": "#E4E4E2",
 "images": [
-"assets/products/faith-over-fear-crewneck-a/ash-concrete.jpg",
-"assets/products/faith-over-fear-crewneck-a/ash-concrete-b.jpg"
+"assets/products/faith-over-fear-crewneck-a/ash-back.jpg",
+"assets/products/faith-over-fear-crewneck-a/ash-front.jpg"
 ]
 },
 {
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/faith-over-fear-crewneck-a/navy-concrete-b.jpg",
-"assets/products/faith-over-fear-crewneck-a/navy-concrete.jpg"
+"assets/products/faith-over-fear-crewneck-a/navy-back.jpg",
+"assets/products/faith-over-fear-crewneck-a/navy-front.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/faith-over-fear-crewneck-a/white-concrete-b.jpg",
-"assets/products/faith-over-fear-crewneck-a/white-concrete.jpg"
+"assets/products/faith-over-fear-crewneck-a/white-back.jpg",
+"assets/products/faith-over-fear-crewneck-a/white-front.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/faith-over-fear-crewneck-a/black-concrete.jpg",
-"assets/products/faith-over-fear-crewneck-a/black-concrete-b.jpg"
+"assets/products/faith-over-fear-crewneck-a/black-back.jpg",
+"assets/products/faith-over-fear-crewneck-a/black-front.jpg"
 ]
 }
 ],
-"img": "assets/products/faith-over-fear-crewneck-a/ash-concrete.jpg",
-"imgAlt": "assets/products/faith-over-fear-crewneck-a/ash-concrete-b.jpg"
+"img": "assets/products/faith-over-fear-crewneck-a/ash-back.jpg",
+"imgAlt": "assets/products/faith-over-fear-crewneck-a/ash-front.jpg",
+"sides": [
+"back",
+"front"
+],
+"heroColor": "Ash"
 },
 {
 "slug": "john-146-crewneck",
@@ -476,45 +486,50 @@ window.PRODUCTS = [
 "name": "Ash",
 "swatch": "#E4E4E2",
 "images": [
-"assets/products/john-146-crewneck/ash-concrete.jpg",
-"assets/products/john-146-crewneck/ash-concrete-b.jpg"
+"assets/products/john-146-crewneck/ash-front.jpg",
+"assets/products/john-146-crewneck/ash-back.jpg"
 ]
 },
 {
 "name": "Light Blue",
 "swatch": "#BBD6E7",
 "images": [
-"assets/products/john-146-crewneck/light-blue-concrete.jpg",
-"assets/products/john-146-crewneck/light-blue-concrete-b.jpg"
+"assets/products/john-146-crewneck/light-blue-front.jpg",
+"assets/products/john-146-crewneck/light-blue-back.jpg"
 ]
 },
 {
 "name": "Light Pink",
 "swatch": "#E9C6CE",
 "images": [
-"assets/products/john-146-crewneck/light-pink-concrete.jpg",
-"assets/products/john-146-crewneck/light-pink-concrete-b.jpg"
+"assets/products/john-146-crewneck/light-pink-front.jpg",
+"assets/products/john-146-crewneck/light-pink-back.jpg"
 ]
 },
 {
 "name": "Sand",
 "swatch": "#D8C9A4",
 "images": [
-"assets/products/john-146-crewneck/sand-concrete.jpg",
-"assets/products/john-146-crewneck/sand-concrete-b.jpg"
+"assets/products/john-146-crewneck/sand-front.jpg",
+"assets/products/john-146-crewneck/sand-back.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/john-146-crewneck/white-concrete.jpg",
-"assets/products/john-146-crewneck/white-concrete-b.jpg"
+"assets/products/john-146-crewneck/white-front.jpg",
+"assets/products/john-146-crewneck/white-back.jpg"
 ]
 }
 ],
-"img": "assets/products/john-146-crewneck/ash-concrete.jpg",
-"imgAlt": "assets/products/john-146-crewneck/ash-concrete-b.jpg"
+"img": "assets/products/john-146-crewneck/light-blue-front.jpg",
+"imgAlt": "assets/products/john-146-crewneck/light-blue-back.jpg",
+"sides": [
+"front",
+"back"
+],
+"heroColor": "Light Blue"
 },
 {
 "slug": "crusader-deus-vult-hoodie",
@@ -626,29 +641,34 @@ window.PRODUCTS = [
 "name": "Charcoal",
 "swatch": "#3E4249",
 "images": [
-"assets/products/crusader-deus-vult-hoodie/charcoal-concrete.jpg",
-"assets/products/crusader-deus-vult-hoodie/charcoal-concrete-b.jpg"
+"assets/products/crusader-deus-vult-hoodie/charcoal-back.jpg",
+"assets/products/crusader-deus-vult-hoodie/charcoal-front.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/crusader-deus-vult-hoodie/white-concrete.jpg",
-"assets/products/crusader-deus-vult-hoodie/white-concrete-b.jpg"
+"assets/products/crusader-deus-vult-hoodie/white-back.jpg",
+"assets/products/crusader-deus-vult-hoodie/white-front.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/crusader-deus-vult-hoodie/black-concrete.jpg",
-"assets/products/crusader-deus-vult-hoodie/black-concrete-b.jpg"
+"assets/products/crusader-deus-vult-hoodie/black-back.jpg",
+"assets/products/crusader-deus-vult-hoodie/black-front.jpg"
 ]
 }
 ],
-"img": "assets/products/crusader-deus-vult-hoodie/charcoal-concrete.jpg",
-"imgAlt": "assets/products/crusader-deus-vult-hoodie/charcoal-concrete-b.jpg"
+"img": "assets/products/crusader-deus-vult-hoodie/black-back.jpg",
+"imgAlt": "assets/products/crusader-deus-vult-hoodie/black-front.jpg",
+"sides": [
+"back",
+"front"
+],
+"heroColor": "Black"
 },
 {
 "slug": "exodus-1414-hoodie",
@@ -782,53 +802,58 @@ window.PRODUCTS = [
 "name": "Charcoal",
 "swatch": "#3E4249",
 "images": [
-"assets/products/exodus-1414-hoodie/charcoal-concrete.jpg",
-"assets/products/exodus-1414-hoodie/charcoal-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie/charcoal-back.jpg",
+"assets/products/exodus-1414-hoodie/charcoal-front.jpg"
 ]
 },
 {
 "name": "Maroon",
 "swatch": "#5E212A",
 "images": [
-"assets/products/exodus-1414-hoodie/maroon-concrete.jpg",
-"assets/products/exodus-1414-hoodie/maroon-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie/maroon-back.jpg",
+"assets/products/exodus-1414-hoodie/maroon-front.jpg"
 ]
 },
 {
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/exodus-1414-hoodie/navy-concrete.jpg",
-"assets/products/exodus-1414-hoodie/navy-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie/navy-back.jpg",
+"assets/products/exodus-1414-hoodie/navy-front.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/exodus-1414-hoodie/white-concrete.jpg",
-"assets/products/exodus-1414-hoodie/white-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie/white-back.jpg",
+"assets/products/exodus-1414-hoodie/white-front.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/exodus-1414-hoodie/black-concrete.jpg",
-"assets/products/exodus-1414-hoodie/black-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie/black-back.jpg",
+"assets/products/exodus-1414-hoodie/black-front.jpg"
 ]
 },
 {
 "name": "Forest Green",
 "swatch": "#22402E",
 "images": [
-"assets/products/exodus-1414-hoodie/forest-green-concrete.jpg",
-"assets/products/exodus-1414-hoodie/forest-green-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie/forest-green-back.jpg",
+"assets/products/exodus-1414-hoodie/forest-green-front.jpg"
 ]
 }
 ],
-"img": "assets/products/exodus-1414-hoodie/charcoal-concrete.jpg",
-"imgAlt": "assets/products/exodus-1414-hoodie/charcoal-concrete-b.jpg"
+"img": "assets/products/exodus-1414-hoodie/navy-back.jpg",
+"imgAlt": "assets/products/exodus-1414-hoodie/navy-front.jpg",
+"sides": [
+"back",
+"front"
+],
+"heroColor": "Navy"
 },
 {
 "slug": "exodus-1414-hoodie-2",
@@ -976,69 +1001,74 @@ window.PRODUCTS = [
 "name": "Charcoal",
 "swatch": "#3E4249",
 "images": [
-"assets/products/exodus-1414-hoodie-2/charcoal-concrete.jpg",
-"assets/products/exodus-1414-hoodie-2/charcoal-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie-2/charcoal-back.jpg",
+"assets/products/exodus-1414-hoodie-2/charcoal-front.jpg"
 ]
 },
 {
 "name": "Maroon",
 "swatch": "#5E212A",
 "images": [
-"assets/products/exodus-1414-hoodie-2/maroon-concrete.jpg",
-"assets/products/exodus-1414-hoodie-2/maroon-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie-2/maroon-back.jpg",
+"assets/products/exodus-1414-hoodie-2/maroon-front.jpg"
 ]
 },
 {
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/exodus-1414-hoodie-2/navy-concrete.jpg",
-"assets/products/exodus-1414-hoodie-2/navy-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie-2/navy-back.jpg",
+"assets/products/exodus-1414-hoodie-2/navy-front.jpg"
 ]
 },
 {
 "name": "Sand",
 "swatch": "#D8C9A4",
 "images": [
-"assets/products/exodus-1414-hoodie-2/sand-concrete.jpg",
-"assets/products/exodus-1414-hoodie-2/sand-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie-2/sand-back.jpg",
+"assets/products/exodus-1414-hoodie-2/sand-front.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/exodus-1414-hoodie-2/white-concrete.jpg",
-"assets/products/exodus-1414-hoodie-2/white-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie-2/white-back.jpg",
+"assets/products/exodus-1414-hoodie-2/white-front.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/exodus-1414-hoodie-2/black-concrete.jpg",
-"assets/products/exodus-1414-hoodie-2/black-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie-2/black-back.jpg",
+"assets/products/exodus-1414-hoodie-2/black-front.jpg"
 ]
 },
 {
 "name": "Forest Green",
 "swatch": "#22402E",
 "images": [
-"assets/products/exodus-1414-hoodie-2/forest-green-concrete-b.jpg",
-"assets/products/exodus-1414-hoodie-2/forest-green-concrete.jpg"
+"assets/products/exodus-1414-hoodie-2/forest-green-back.jpg",
+"assets/products/exodus-1414-hoodie-2/forest-green-front.jpg"
 ]
 },
 {
 "name": "Light Pink",
 "swatch": "#E9C6CE",
 "images": [
-"assets/products/exodus-1414-hoodie-2/light-pink-concrete.jpg",
-"assets/products/exodus-1414-hoodie-2/light-pink-concrete-b.jpg"
+"assets/products/exodus-1414-hoodie-2/light-pink-back.jpg",
+"assets/products/exodus-1414-hoodie-2/light-pink-front.jpg"
 ]
 }
 ],
-"img": "assets/products/exodus-1414-hoodie-2/charcoal-concrete.jpg",
-"imgAlt": "assets/products/exodus-1414-hoodie-2/charcoal-concrete-b.jpg"
+"img": "assets/products/exodus-1414-hoodie-2/maroon-back.jpg",
+"imgAlt": "assets/products/exodus-1414-hoodie-2/maroon-front.jpg",
+"sides": [
+"back",
+"front"
+],
+"heroColor": "Maroon"
 },
 {
 "slug": "faith-over-fear-crewneck-b",
@@ -1183,69 +1213,74 @@ window.PRODUCTS = [
 "name": "Ash",
 "swatch": "#E4E4E2",
 "images": [
-"assets/products/faith-over-fear-crewneck-b/ash-concrete.jpg",
-"assets/products/faith-over-fear-crewneck-b/ash-concrete-b.jpg"
+"assets/products/faith-over-fear-crewneck-b/ash-back.jpg",
+"assets/products/faith-over-fear-crewneck-b/ash-front.jpg"
 ]
 },
 {
 "name": "Dark Chocolate",
 "swatch": "#3A2A22",
 "images": [
-"assets/products/faith-over-fear-crewneck-b/dark-chocolate-concrete.jpg",
-"assets/products/faith-over-fear-crewneck-b/dark-chocolate-concrete-b.jpg"
+"assets/products/faith-over-fear-crewneck-b/dark-chocolate-back.jpg",
+"assets/products/faith-over-fear-crewneck-b/dark-chocolate-front.jpg"
 ]
 },
 {
 "name": "Light Pink",
 "swatch": "#E9C6CE",
 "images": [
-"assets/products/faith-over-fear-crewneck-b/light-pink-concrete.jpg",
-"assets/products/faith-over-fear-crewneck-b/light-pink-concrete-b.jpg"
+"assets/products/faith-over-fear-crewneck-b/light-pink-back.jpg",
+"assets/products/faith-over-fear-crewneck-b/light-pink-front.jpg"
 ]
 },
 {
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/faith-over-fear-crewneck-b/navy-concrete.jpg",
-"assets/products/faith-over-fear-crewneck-b/navy-concrete-b.jpg"
+"assets/products/faith-over-fear-crewneck-b/navy-back.jpg",
+"assets/products/faith-over-fear-crewneck-b/navy-front.jpg"
 ]
 },
 {
 "name": "Sand",
 "swatch": "#D8C9A4",
 "images": [
-"assets/products/faith-over-fear-crewneck-b/sand-concrete.jpg",
-"assets/products/faith-over-fear-crewneck-b/sand-concrete-b.jpg"
+"assets/products/faith-over-fear-crewneck-b/sand-back.jpg",
+"assets/products/faith-over-fear-crewneck-b/sand-front.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/faith-over-fear-crewneck-b/white-concrete.jpg",
-"assets/products/faith-over-fear-crewneck-b/white-concrete-b.jpg"
+"assets/products/faith-over-fear-crewneck-b/white-back.jpg",
+"assets/products/faith-over-fear-crewneck-b/white-front.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/faith-over-fear-crewneck-b/black-concrete.jpg",
-"assets/products/faith-over-fear-crewneck-b/black-concrete-b.jpg"
+"assets/products/faith-over-fear-crewneck-b/black-back.jpg",
+"assets/products/faith-over-fear-crewneck-b/black-front.jpg"
 ]
 },
 {
 "name": "Royal",
 "swatch": "#284C9E",
 "images": [
-"assets/products/faith-over-fear-crewneck-b/royal-concrete.jpg",
-"assets/products/faith-over-fear-crewneck-b/royal-concrete-b.jpg"
+"assets/products/faith-over-fear-crewneck-b/royal-back.jpg",
+"assets/products/faith-over-fear-crewneck-b/royal-front.jpg"
 ]
 }
 ],
-"img": "assets/products/faith-over-fear-crewneck-b/ash-concrete.jpg",
-"imgAlt": "assets/products/faith-over-fear-crewneck-b/ash-concrete-b.jpg"
+"img": "assets/products/faith-over-fear-crewneck-b/white-back.jpg",
+"imgAlt": "assets/products/faith-over-fear-crewneck-b/white-front.jpg",
+"sides": [
+"back",
+"front"
+],
+"heroColor": "White"
 },
 {
 "slug": "faith-over-fear-hoodie",
@@ -1358,29 +1393,34 @@ window.PRODUCTS = [
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/faith-over-fear-hoodie/navy-concrete.jpg",
-"assets/products/faith-over-fear-hoodie/navy-concrete-b.jpg"
+"assets/products/faith-over-fear-hoodie/navy-back.jpg",
+"assets/products/faith-over-fear-hoodie/navy-front.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/faith-over-fear-hoodie/white-concrete.jpg",
-"assets/products/faith-over-fear-hoodie/white-concrete-b.jpg"
+"assets/products/faith-over-fear-hoodie/white-back.jpg",
+"assets/products/faith-over-fear-hoodie/white-front.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/faith-over-fear-hoodie/black-concrete.jpg",
-"assets/products/faith-over-fear-hoodie/black-concrete-b.jpg"
+"assets/products/faith-over-fear-hoodie/black-back.jpg",
+"assets/products/faith-over-fear-hoodie/black-front.jpg"
 ]
 }
 ],
-"img": "assets/products/faith-over-fear-hoodie/navy-concrete.jpg",
-"imgAlt": "assets/products/faith-over-fear-hoodie/navy-concrete-b.jpg"
+"img": "assets/products/faith-over-fear-hoodie/white-back.jpg",
+"imgAlt": "assets/products/faith-over-fear-hoodie/white-front.jpg",
+"sides": [
+"back",
+"front"
+],
+"heroColor": "White"
 },
 {
 "slug": "god-is-good-hoodie",
@@ -1498,37 +1538,42 @@ window.PRODUCTS = [
 "name": "Sand",
 "swatch": "#D8C9A4",
 "images": [
-"assets/products/god-is-good-hoodie/sand-concrete-b.jpg",
-"assets/products/god-is-good-hoodie/sand-concrete.jpg"
+"assets/products/god-is-good-hoodie/sand-back.jpg",
+"assets/products/god-is-good-hoodie/sand-front.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/god-is-good-hoodie/black-concrete.jpg",
-"assets/products/god-is-good-hoodie/black-concrete-b.jpg"
+"assets/products/god-is-good-hoodie/black-back.jpg",
+"assets/products/god-is-good-hoodie/black-front.jpg"
 ]
 },
 {
 "name": "Light Pink",
 "swatch": "#E9C6CE",
 "images": [
-"assets/products/god-is-good-hoodie/light-pink-concrete.jpg",
-"assets/products/god-is-good-hoodie/light-pink-concrete-b.jpg"
+"assets/products/god-is-good-hoodie/light-pink-back.jpg",
+"assets/products/god-is-good-hoodie/light-pink-front.jpg"
 ]
 },
 {
 "name": "Military Green",
 "swatch": "#4B5320",
 "images": [
-"assets/products/god-is-good-hoodie/military-green-concrete.jpg",
-"assets/products/god-is-good-hoodie/military-green-concrete-b.jpg"
+"assets/products/god-is-good-hoodie/military-green-back.jpg",
+"assets/products/god-is-good-hoodie/military-green-front.jpg"
 ]
 }
 ],
-"img": "assets/products/god-is-good-hoodie/sand-concrete-b.jpg",
-"imgAlt": "assets/products/god-is-good-hoodie/sand-concrete.jpg"
+"img": "assets/products/god-is-good-hoodie/light-pink-back.jpg",
+"imgAlt": "assets/products/god-is-good-hoodie/light-pink-front.jpg",
+"sides": [
+"back",
+"front"
+],
+"heroColor": "Light Pink"
 },
 {
 "slug": "isaiah-4319-hoodie",
@@ -1647,37 +1692,42 @@ window.PRODUCTS = [
 "name": "Sand",
 "swatch": "#D8C9A4",
 "images": [
-"assets/products/isaiah-4319-hoodie/sand-concrete.jpg",
-"assets/products/isaiah-4319-hoodie/sand-concrete-b.jpg"
+"assets/products/isaiah-4319-hoodie/sand-back.jpg",
+"assets/products/isaiah-4319-hoodie/sand-front.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/isaiah-4319-hoodie/white-concrete.jpg",
-"assets/products/isaiah-4319-hoodie/white-concrete-b.jpg"
+"assets/products/isaiah-4319-hoodie/white-back.jpg",
+"assets/products/isaiah-4319-hoodie/white-front.jpg"
 ]
 },
 {
 "name": "Sport Grey",
 "swatch": "#B7B7B4",
 "images": [
-"assets/products/isaiah-4319-hoodie/sport-grey-concrete.jpg",
-"assets/products/isaiah-4319-hoodie/sport-grey-concrete-b.jpg"
+"assets/products/isaiah-4319-hoodie/sport-grey-back.jpg",
+"assets/products/isaiah-4319-hoodie/sport-grey-front.jpg"
 ]
 },
 {
 "name": "Military Green",
 "swatch": "#4B5320",
 "images": [
-"assets/products/isaiah-4319-hoodie/military-green-concrete.jpg",
-"assets/products/isaiah-4319-hoodie/military-green-concrete-b.jpg"
+"assets/products/isaiah-4319-hoodie/military-green-back.jpg",
+"assets/products/isaiah-4319-hoodie/military-green-front.jpg"
 ]
 }
 ],
-"img": "assets/products/isaiah-4319-hoodie/sand-concrete.jpg",
-"imgAlt": "assets/products/isaiah-4319-hoodie/sand-concrete-b.jpg"
+"img": "assets/products/isaiah-4319-hoodie/sand-back.jpg",
+"imgAlt": "assets/products/isaiah-4319-hoodie/sand-front.jpg",
+"sides": [
+"back",
+"front"
+],
+"heroColor": "Sand"
 },
 {
 "slug": "jesus-king-of-kings-tshirt",
@@ -1762,37 +1812,42 @@ window.PRODUCTS = [
 "name": "Clay",
 "swatch": "#A7614A",
 "images": [
-"assets/products/jesus-king-of-kings-tshirt/clay-concrete.jpg",
-"assets/products/jesus-king-of-kings-tshirt/clay-concrete-b.jpg"
+"assets/products/jesus-king-of-kings-tshirt/clay-front.jpg",
+"assets/products/jesus-king-of-kings-tshirt/clay-back.jpg"
 ]
 },
 {
 "name": "Ocean",
 "swatch": "#2E5A73",
 "images": [
-"assets/products/jesus-king-of-kings-tshirt/ocean-concrete.jpg",
-"assets/products/jesus-king-of-kings-tshirt/ocean-concrete-b.jpg"
+"assets/products/jesus-king-of-kings-tshirt/ocean-front.jpg",
+"assets/products/jesus-king-of-kings-tshirt/ocean-back.jpg"
 ]
 },
 {
 "name": "Smoke",
 "swatch": "#8B8E90",
 "images": [
-"assets/products/jesus-king-of-kings-tshirt/smoke-concrete.jpg",
-"assets/products/jesus-king-of-kings-tshirt/smoke-concrete-b.jpg"
+"assets/products/jesus-king-of-kings-tshirt/smoke-front.jpg",
+"assets/products/jesus-king-of-kings-tshirt/smoke-back.jpg"
 ]
 },
 {
 "name": "Fern",
 "swatch": "#5C6B3B",
 "images": [
-"assets/products/jesus-king-of-kings-tshirt/fern-concrete.jpg",
-"assets/products/jesus-king-of-kings-tshirt/fern-concrete-b.jpg"
+"assets/products/jesus-king-of-kings-tshirt/fern-front.jpg",
+"assets/products/jesus-king-of-kings-tshirt/fern-back.jpg"
 ]
 }
 ],
-"img": "assets/products/jesus-king-of-kings-tshirt/clay-concrete.jpg",
-"imgAlt": "assets/products/jesus-king-of-kings-tshirt/clay-concrete-b.jpg"
+"img": "assets/products/jesus-king-of-kings-tshirt/smoke-front.jpg",
+"imgAlt": "assets/products/jesus-king-of-kings-tshirt/smoke-back.jpg",
+"sides": [
+"front",
+"back"
+],
+"heroColor": "Smoke"
 },
 {
 "slug": "john-146-hoodie",
@@ -1940,69 +1995,74 @@ window.PRODUCTS = [
 "name": "Charcoal",
 "swatch": "#3E4249",
 "images": [
-"assets/products/john-146-hoodie/charcoal-concrete.jpg",
-"assets/products/john-146-hoodie/charcoal-concrete-b.jpg"
+"assets/products/john-146-hoodie/charcoal-back.jpg",
+"assets/products/john-146-hoodie/charcoal-front.jpg"
 ]
 },
 {
 "name": "Maroon",
 "swatch": "#5E212A",
 "images": [
-"assets/products/john-146-hoodie/maroon-concrete.jpg",
-"assets/products/john-146-hoodie/maroon-concrete-b.jpg"
+"assets/products/john-146-hoodie/maroon-back.jpg",
+"assets/products/john-146-hoodie/maroon-front.jpg"
 ]
 },
 {
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/john-146-hoodie/navy-concrete.jpg",
-"assets/products/john-146-hoodie/navy-concrete-b.jpg"
+"assets/products/john-146-hoodie/navy-back.jpg",
+"assets/products/john-146-hoodie/navy-front.jpg"
 ]
 },
 {
 "name": "Sand",
 "swatch": "#D8C9A4",
 "images": [
-"assets/products/john-146-hoodie/sand-concrete.jpg",
-"assets/products/john-146-hoodie/sand-concrete-b.jpg"
+"assets/products/john-146-hoodie/sand-back.jpg",
+"assets/products/john-146-hoodie/sand-front.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/john-146-hoodie/white-concrete.jpg",
-"assets/products/john-146-hoodie/white-concrete-b.jpg"
+"assets/products/john-146-hoodie/white-back.jpg",
+"assets/products/john-146-hoodie/white-front.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/john-146-hoodie/black-concrete.jpg",
-"assets/products/john-146-hoodie/black-concrete-b.jpg"
+"assets/products/john-146-hoodie/black-back.jpg",
+"assets/products/john-146-hoodie/black-front.jpg"
 ]
 },
 {
 "name": "Forest Green",
 "swatch": "#22402E",
 "images": [
-"assets/products/john-146-hoodie/forest-green-concrete.jpg",
-"assets/products/john-146-hoodie/forest-green-concrete-b.jpg"
+"assets/products/john-146-hoodie/forest-green-back.jpg",
+"assets/products/john-146-hoodie/forest-green-front.jpg"
 ]
 },
 {
 "name": "Light Pink",
 "swatch": "#E9C6CE",
 "images": [
-"assets/products/john-146-hoodie/light-pink-concrete.jpg",
-"assets/products/john-146-hoodie/light-pink-concrete-b.jpg"
+"assets/products/john-146-hoodie/light-pink-back.jpg",
+"assets/products/john-146-hoodie/light-pink-front.jpg"
 ]
 }
 ],
-"img": "assets/products/john-146-hoodie/charcoal-concrete.jpg",
-"imgAlt": "assets/products/john-146-hoodie/charcoal-concrete-b.jpg"
+"img": "assets/products/john-146-hoodie/white-back.jpg",
+"imgAlt": "assets/products/john-146-hoodie/white-front.jpg",
+"sides": [
+"back",
+"front"
+],
+"heroColor": "White"
 },
 {
 "slug": "matthew-1926-hoodie",
@@ -2135,53 +2195,58 @@ window.PRODUCTS = [
 "name": "Cocoa",
 "swatch": "#6A4A39",
 "images": [
-"assets/products/matthew-1926-hoodie/cocoa-concrete-b.jpg",
-"assets/products/matthew-1926-hoodie/cocoa-concrete.jpg"
+"assets/products/matthew-1926-hoodie/cocoa-front.jpg",
+"assets/products/matthew-1926-hoodie/cocoa-back.jpg"
 ]
 },
 {
 "name": "Charcoal",
 "swatch": "#3E4249",
 "images": [
-"assets/products/matthew-1926-hoodie/charcoal-concrete-b.jpg",
-"assets/products/matthew-1926-hoodie/charcoal-concrete.jpg"
+"assets/products/matthew-1926-hoodie/charcoal-front.jpg",
+"assets/products/matthew-1926-hoodie/charcoal-back.jpg"
 ]
 },
 {
 "name": "Maroon",
 "swatch": "#5E212A",
 "images": [
-"assets/products/matthew-1926-hoodie/maroon-concrete-b.jpg",
-"assets/products/matthew-1926-hoodie/maroon-concrete.jpg"
+"assets/products/matthew-1926-hoodie/maroon-front.jpg",
+"assets/products/matthew-1926-hoodie/maroon-back.jpg"
 ]
 },
 {
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/matthew-1926-hoodie/navy-concrete-b.jpg",
-"assets/products/matthew-1926-hoodie/navy-concrete.jpg"
+"assets/products/matthew-1926-hoodie/navy-front.jpg",
+"assets/products/matthew-1926-hoodie/navy-back.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/matthew-1926-hoodie/black-concrete-b.jpg",
-"assets/products/matthew-1926-hoodie/black-concrete.jpg"
+"assets/products/matthew-1926-hoodie/black-front.jpg",
+"assets/products/matthew-1926-hoodie/black-back.jpg"
 ]
 },
 {
 "name": "Forest Green",
 "swatch": "#22402E",
 "images": [
-"assets/products/matthew-1926-hoodie/forest-green-concrete-b.jpg",
-"assets/products/matthew-1926-hoodie/forest-green-concrete.jpg"
+"assets/products/matthew-1926-hoodie/forest-green-front.jpg",
+"assets/products/matthew-1926-hoodie/forest-green-back.jpg"
 ]
 }
 ],
-"img": "assets/products/matthew-1926-hoodie/cocoa-concrete-b.jpg",
-"imgAlt": "assets/products/matthew-1926-hoodie/cocoa-concrete.jpg"
+"img": "assets/products/matthew-1926-hoodie/forest-green-front.jpg",
+"imgAlt": "assets/products/matthew-1926-hoodie/forest-green-back.jpg",
+"sides": [
+"front",
+"back"
+],
+"heroColor": "Forest Green"
 },
 {
 "slug": "philippians-413-hoodie",
@@ -2310,53 +2375,58 @@ window.PRODUCTS = [
 "name": "Charcoal",
 "swatch": "#3E4249",
 "images": [
-"assets/products/philippians-413-hoodie/charcoal-concrete.jpg",
-"assets/products/philippians-413-hoodie/charcoal-concrete-b.jpg"
+"assets/products/philippians-413-hoodie/charcoal-front.jpg",
+"assets/products/philippians-413-hoodie/charcoal-back.jpg"
 ]
 },
 {
 "name": "Maroon",
 "swatch": "#5E212A",
 "images": [
-"assets/products/philippians-413-hoodie/maroon-concrete.jpg",
-"assets/products/philippians-413-hoodie/maroon-concrete-b.jpg"
+"assets/products/philippians-413-hoodie/maroon-front.jpg",
+"assets/products/philippians-413-hoodie/maroon-back.jpg"
 ]
 },
 {
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/philippians-413-hoodie/navy-concrete.jpg",
-"assets/products/philippians-413-hoodie/navy-concrete-b.jpg"
+"assets/products/philippians-413-hoodie/navy-front.jpg",
+"assets/products/philippians-413-hoodie/navy-back.jpg"
 ]
 },
 {
 "name": "Royal",
 "swatch": "#284C9E",
 "images": [
-"assets/products/philippians-413-hoodie/royal-concrete.jpg",
-"assets/products/philippians-413-hoodie/royal-concrete-b.jpg"
+"assets/products/philippians-413-hoodie/royal-front.jpg",
+"assets/products/philippians-413-hoodie/royal-back.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/philippians-413-hoodie/black-concrete.jpg",
-"assets/products/philippians-413-hoodie/black-concrete-b.jpg"
+"assets/products/philippians-413-hoodie/black-front.jpg",
+"assets/products/philippians-413-hoodie/black-back.jpg"
 ]
 },
 {
 "name": "Forest Green",
 "swatch": "#22402E",
 "images": [
-"assets/products/philippians-413-hoodie/forest-green-concrete.jpg",
-"assets/products/philippians-413-hoodie/forest-green-concrete-b.jpg"
+"assets/products/philippians-413-hoodie/forest-green-front.jpg",
+"assets/products/philippians-413-hoodie/forest-green-back.jpg"
 ]
 }
 ],
-"img": "assets/products/philippians-413-hoodie/charcoal-concrete.jpg",
-"imgAlt": "assets/products/philippians-413-hoodie/charcoal-concrete-b.jpg"
+"img": "assets/products/philippians-413-hoodie/charcoal-front.jpg",
+"imgAlt": "assets/products/philippians-413-hoodie/charcoal-back.jpg",
+"sides": [
+"front",
+"back"
+],
+"heroColor": "Charcoal"
 },
 {
 "slug": "proverbs-35-hoodie",
@@ -2500,69 +2570,74 @@ window.PRODUCTS = [
 "name": "Charcoal",
 "swatch": "#3E4249",
 "images": [
-"assets/products/proverbs-35-hoodie/charcoal-concrete-b.jpg",
-"assets/products/proverbs-35-hoodie/charcoal-concrete.jpg"
+"assets/products/proverbs-35-hoodie/charcoal-front.jpg",
+"assets/products/proverbs-35-hoodie/charcoal-back.jpg"
 ]
 },
 {
 "name": "Maroon",
 "swatch": "#5E212A",
 "images": [
-"assets/products/proverbs-35-hoodie/maroon-concrete-b.jpg",
-"assets/products/proverbs-35-hoodie/maroon-concrete.jpg"
+"assets/products/proverbs-35-hoodie/maroon-front.jpg",
+"assets/products/proverbs-35-hoodie/maroon-back.jpg"
 ]
 },
 {
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/proverbs-35-hoodie/navy-concrete-b.jpg",
-"assets/products/proverbs-35-hoodie/navy-concrete.jpg"
+"assets/products/proverbs-35-hoodie/navy-front.jpg",
+"assets/products/proverbs-35-hoodie/navy-back.jpg"
 ]
 },
 {
 "name": "Sand",
 "swatch": "#D8C9A4",
 "images": [
-"assets/products/proverbs-35-hoodie/sand-concrete-b.jpg",
-"assets/products/proverbs-35-hoodie/sand-concrete.jpg"
+"assets/products/proverbs-35-hoodie/sand-front.jpg",
+"assets/products/proverbs-35-hoodie/sand-back.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/proverbs-35-hoodie/white-concrete-b.jpg",
-"assets/products/proverbs-35-hoodie/white-concrete.jpg"
+"assets/products/proverbs-35-hoodie/white-front.jpg",
+"assets/products/proverbs-35-hoodie/white-back.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/proverbs-35-hoodie/black-concrete-b.jpg",
-"assets/products/proverbs-35-hoodie/black-concrete.jpg"
+"assets/products/proverbs-35-hoodie/black-front.jpg",
+"assets/products/proverbs-35-hoodie/black-back.jpg"
 ]
 },
 {
 "name": "Forest Green",
 "swatch": "#22402E",
 "images": [
-"assets/products/proverbs-35-hoodie/forest-green-concrete-b.jpg",
-"assets/products/proverbs-35-hoodie/forest-green-concrete.jpg"
+"assets/products/proverbs-35-hoodie/forest-green-front.jpg",
+"assets/products/proverbs-35-hoodie/forest-green-back.jpg"
 ]
 },
 {
 "name": "Light Pink",
 "swatch": "#E9C6CE",
 "images": [
-"assets/products/proverbs-35-hoodie/light-pink-concrete-b.jpg",
-"assets/products/proverbs-35-hoodie/light-pink-concrete.jpg"
+"assets/products/proverbs-35-hoodie/light-pink-front.jpg",
+"assets/products/proverbs-35-hoodie/light-pink-back.jpg"
 ]
 }
 ],
-"img": "assets/products/proverbs-35-hoodie/charcoal-concrete-b.jpg",
-"imgAlt": "assets/products/proverbs-35-hoodie/charcoal-concrete.jpg"
+"img": "assets/products/proverbs-35-hoodie/maroon-front.jpg",
+"imgAlt": "assets/products/proverbs-35-hoodie/maroon-back.jpg",
+"sides": [
+"front",
+"back"
+],
+"heroColor": "Maroon"
 },
 {
 "slug": "psalm-231-hoodie",
@@ -2710,69 +2785,74 @@ window.PRODUCTS = [
 "name": "Charcoal",
 "swatch": "#3E4249",
 "images": [
-"assets/products/psalm-231-hoodie/charcoal-concrete-b.jpg",
-"assets/products/psalm-231-hoodie/charcoal-concrete.jpg"
+"assets/products/psalm-231-hoodie/charcoal-front.jpg",
+"assets/products/psalm-231-hoodie/charcoal-back.jpg"
 ]
 },
 {
 "name": "Maroon",
 "swatch": "#5E212A",
 "images": [
-"assets/products/psalm-231-hoodie/maroon-concrete-b.jpg",
-"assets/products/psalm-231-hoodie/maroon-concrete.jpg"
+"assets/products/psalm-231-hoodie/maroon-front.jpg",
+"assets/products/psalm-231-hoodie/maroon-back.jpg"
 ]
 },
 {
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/psalm-231-hoodie/navy-concrete-b.jpg",
-"assets/products/psalm-231-hoodie/navy-concrete.jpg"
+"assets/products/psalm-231-hoodie/navy-front.jpg",
+"assets/products/psalm-231-hoodie/navy-back.jpg"
 ]
 },
 {
 "name": "Sand",
 "swatch": "#D8C9A4",
 "images": [
-"assets/products/psalm-231-hoodie/sand-concrete-b.jpg",
-"assets/products/psalm-231-hoodie/sand-concrete.jpg"
+"assets/products/psalm-231-hoodie/sand-front.jpg",
+"assets/products/psalm-231-hoodie/sand-back.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/psalm-231-hoodie/white-concrete-b.jpg",
-"assets/products/psalm-231-hoodie/white-concrete.jpg"
+"assets/products/psalm-231-hoodie/white-front.jpg",
+"assets/products/psalm-231-hoodie/white-back.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/psalm-231-hoodie/black-concrete-b.jpg",
-"assets/products/psalm-231-hoodie/black-concrete.jpg"
+"assets/products/psalm-231-hoodie/black-front.jpg",
+"assets/products/psalm-231-hoodie/black-back.jpg"
 ]
 },
 {
 "name": "Forest Green",
 "swatch": "#22402E",
 "images": [
-"assets/products/psalm-231-hoodie/forest-green-concrete-b.jpg",
-"assets/products/psalm-231-hoodie/forest-green-concrete.jpg"
+"assets/products/psalm-231-hoodie/forest-green-front.jpg",
+"assets/products/psalm-231-hoodie/forest-green-back.jpg"
 ]
 },
 {
 "name": "Light Pink",
 "swatch": "#E9C6CE",
 "images": [
-"assets/products/psalm-231-hoodie/light-pink-concrete-b.jpg",
-"assets/products/psalm-231-hoodie/light-pink-concrete.jpg"
+"assets/products/psalm-231-hoodie/light-pink-front.jpg",
+"assets/products/psalm-231-hoodie/light-pink-back.jpg"
 ]
 }
 ],
-"img": "assets/products/psalm-231-hoodie/charcoal-concrete-b.jpg",
-"imgAlt": "assets/products/psalm-231-hoodie/charcoal-concrete.jpg"
+"img": "assets/products/psalm-231-hoodie/forest-green-front.jpg",
+"imgAlt": "assets/products/psalm-231-hoodie/forest-green-back.jpg",
+"sides": [
+"front",
+"back"
+],
+"heroColor": "Forest Green"
 },
 {
 "slug": "trust-in-god-hoodie",
@@ -2901,53 +2981,58 @@ window.PRODUCTS = [
 "name": "Charcoal",
 "swatch": "#3E4249",
 "images": [
-"assets/products/trust-in-god-hoodie/charcoal-concrete.jpg",
-"assets/products/trust-in-god-hoodie/charcoal-concrete-b.jpg"
+"assets/products/trust-in-god-hoodie/charcoal-front.jpg",
+"assets/products/trust-in-god-hoodie/charcoal-back.jpg"
 ]
 },
 {
 "name": "Maroon",
 "swatch": "#5E212A",
 "images": [
-"assets/products/trust-in-god-hoodie/maroon-concrete.jpg",
-"assets/products/trust-in-god-hoodie/maroon-concrete-b.jpg"
+"assets/products/trust-in-god-hoodie/maroon-front.jpg",
+"assets/products/trust-in-god-hoodie/maroon-back.jpg"
 ]
 },
 {
 "name": "Navy",
 "swatch": "#232F4C",
 "images": [
-"assets/products/trust-in-god-hoodie/navy-concrete.jpg",
-"assets/products/trust-in-god-hoodie/navy-concrete-b.jpg"
+"assets/products/trust-in-god-hoodie/navy-front.jpg",
+"assets/products/trust-in-god-hoodie/navy-back.jpg"
 ]
 },
 {
 "name": "Royal",
 "swatch": "#284C9E",
 "images": [
-"assets/products/trust-in-god-hoodie/royal-concrete-b.jpg",
-"assets/products/trust-in-god-hoodie/royal-concrete.jpg"
+"assets/products/trust-in-god-hoodie/royal-front.jpg",
+"assets/products/trust-in-god-hoodie/royal-back.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/trust-in-god-hoodie/black-concrete.jpg",
-"assets/products/trust-in-god-hoodie/black-concrete-b.jpg"
+"assets/products/trust-in-god-hoodie/black-front.jpg",
+"assets/products/trust-in-god-hoodie/black-back.jpg"
 ]
 },
 {
 "name": "Forest Green",
 "swatch": "#22402E",
 "images": [
-"assets/products/trust-in-god-hoodie/forest-green-concrete.jpg",
-"assets/products/trust-in-god-hoodie/forest-green-concrete-b.jpg"
+"assets/products/trust-in-god-hoodie/forest-green-front.jpg",
+"assets/products/trust-in-god-hoodie/forest-green-back.jpg"
 ]
 }
 ],
-"img": "assets/products/trust-in-god-hoodie/charcoal-concrete.jpg",
-"imgAlt": "assets/products/trust-in-god-hoodie/charcoal-concrete-b.jpg"
+"img": "assets/products/trust-in-god-hoodie/royal-front.jpg",
+"imgAlt": "assets/products/trust-in-god-hoodie/royal-back.jpg",
+"sides": [
+"front",
+"back"
+],
+"heroColor": "Royal"
 },
 {
 "slug": "walk-by-faith-hoodie",
@@ -3094,68 +3179,73 @@ window.PRODUCTS = [
 "name": "Charcoal",
 "swatch": "#3E4249",
 "images": [
-"assets/products/walk-by-faith-hoodie/charcoal-concrete.jpg",
-"assets/products/walk-by-faith-hoodie/charcoal-concrete-b.jpg"
+"assets/products/walk-by-faith-hoodie/charcoal-back.jpg",
+"assets/products/walk-by-faith-hoodie/charcoal-front.jpg"
 ]
 },
 {
 "name": "Maroon",
 "swatch": "#5E212A",
 "images": [
-"assets/products/walk-by-faith-hoodie/maroon-concrete.jpg",
-"assets/products/walk-by-faith-hoodie/maroon-concrete-b.jpg"
+"assets/products/walk-by-faith-hoodie/maroon-back.jpg",
+"assets/products/walk-by-faith-hoodie/maroon-front.jpg"
 ]
 },
 {
 "name": "Royal",
 "swatch": "#284C9E",
 "images": [
-"assets/products/walk-by-faith-hoodie/royal-concrete.jpg",
-"assets/products/walk-by-faith-hoodie/royal-concrete-b.jpg"
+"assets/products/walk-by-faith-hoodie/royal-back.jpg",
+"assets/products/walk-by-faith-hoodie/royal-front.jpg"
 ]
 },
 {
 "name": "Sand",
 "swatch": "#D8C9A4",
 "images": [
-"assets/products/walk-by-faith-hoodie/sand-concrete.jpg",
-"assets/products/walk-by-faith-hoodie/sand-concrete-b.jpg"
+"assets/products/walk-by-faith-hoodie/sand-back.jpg",
+"assets/products/walk-by-faith-hoodie/sand-front.jpg"
 ]
 },
 {
 "name": "White",
 "swatch": "#F4F3EF",
 "images": [
-"assets/products/walk-by-faith-hoodie/white-concrete.jpg",
-"assets/products/walk-by-faith-hoodie/white-concrete-b.jpg"
+"assets/products/walk-by-faith-hoodie/white-back.jpg",
+"assets/products/walk-by-faith-hoodie/white-front.jpg"
 ]
 },
 {
 "name": "Black",
 "swatch": "#191919",
 "images": [
-"assets/products/walk-by-faith-hoodie/black-concrete.jpg",
-"assets/products/walk-by-faith-hoodie/black-concrete-b.jpg"
+"assets/products/walk-by-faith-hoodie/black-back.jpg",
+"assets/products/walk-by-faith-hoodie/black-front.jpg"
 ]
 },
 {
 "name": "Forest Green",
 "swatch": "#22402E",
 "images": [
-"assets/products/walk-by-faith-hoodie/forest-green-concrete.jpg",
-"assets/products/walk-by-faith-hoodie/forest-green-concrete-b.jpg"
+"assets/products/walk-by-faith-hoodie/forest-green-back.jpg",
+"assets/products/walk-by-faith-hoodie/forest-green-front.jpg"
 ]
 },
 {
 "name": "Light Pink",
 "swatch": "#E9C6CE",
 "images": [
-"assets/products/walk-by-faith-hoodie/light-pink-concrete.jpg",
-"assets/products/walk-by-faith-hoodie/light-pink-concrete-b.jpg"
+"assets/products/walk-by-faith-hoodie/light-pink-back.jpg",
+"assets/products/walk-by-faith-hoodie/light-pink-front.jpg"
 ]
 }
 ],
-"img": "assets/products/walk-by-faith-hoodie/charcoal-concrete.jpg",
-"imgAlt": "assets/products/walk-by-faith-hoodie/charcoal-concrete-b.jpg"
+"img": "assets/products/walk-by-faith-hoodie/black-back.jpg",
+"imgAlt": "assets/products/walk-by-faith-hoodie/black-front.jpg",
+"sides": [
+"back",
+"front"
+],
+"heroColor": "Black"
 }
 ];

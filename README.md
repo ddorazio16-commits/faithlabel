@@ -25,11 +25,11 @@ faithlabel/
 ├── gen-data.py           # catalog.json → data.js + dl-manifest.tsv
 ├── download-variants.sh  # downloads + optimises all gallery images
 ├── download-assets.sh    # (original) re-fetches the grid flatlays
+├── rebuild-mockups.py    # points data.js at the <color>-front/-back mockups (run after gen-data.py)
 └── assets/
     ├── hero.jpg          # heavenly-light hero (Unsplash, free license)
     └── products/
-        ├── <slug>.jpg    # concrete-flatlay grid image (+ -alt hover)
-        └── <slug>/       # per-product color gallery images
+        └── <slug>/       # mockups: <color>-front.jpg + <color>-back.jpg for every color
 ```
 
 ## Refreshing the catalog
@@ -39,6 +39,7 @@ python3 scrape-variants.py   # fetch colors/sizes/variant IDs/images → catalog
 python3 build-colormap.py    # merge the per-image color classification → color-map.json
 python3 gen-data.py          # build data.js + the image download manifest
 ./download-variants.sh       # download + optimise every gallery image
+python3 rebuild-mockups.py   # point every color at its front/back mockup pair (always run last)
 ```
 
 ## Run it locally
@@ -81,8 +82,24 @@ source and regenerate. Each product looks like:
 
 - `cat` drives the filter — one of `hoodie` / `crewneck` / `tshirt`.
 - `variants` maps `Color|Size` → Shopify variant id (used at checkout).
-- Grid image is `assets/products/<slug>.jpg` (+ `-alt.jpg` hover); PDP galleries
-  live in `assets/products/<slug>/`. Filter counts update automatically.
+- Filter counts update automatically.
+
+## Product mockups
+
+Every color of every product has exactly two photos, both a flat-lay on the same
+light-grey concrete floor, 2048px square:
+
+```
+assets/products/<slug>/<color>-front.jpg
+assets/products/<slug>/<color>-back.jpg
+```
+
+They mirror the Shopify store's own mockups (same design, side, placement, print
+and garment color). `rebuild-mockups.py` writes them into `data.js`: each color's
+`images` are ordered so the side Shopify leads with comes first, `sides` records
+which side each image is (the product page labels them Front / Back), and the
+grid card + product page open on `heroColor` — the color Shopify shows first.
+The script exits with an error listing any missing file.
 
 ## Checkout (live — via Shopify)
 

@@ -514,7 +514,14 @@ input{ font-family:inherit; }
   background:rgba(0,0,0,.28); padding:.4rem .8rem; border-radius:999px; pointer-events:none;
   transition:opacity .3s; }
 @media (max-width:640px){ .zoom__hint{ font-size:.7rem; } }
+.pdp__side{ position:absolute; left:.7rem; top:.7rem; z-index:1; padding:.28rem .7rem; border-radius:100px;
+  font-size:.66rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#fff;
+  background:rgba(14,36,86,.62); backdrop-filter:blur(2px); pointer-events:none; }
+.pdp__side[hidden]{ display:none; }
 .pdp__thumbs{ display:flex; gap:.6rem; flex-wrap:wrap; }
+.pdp__thumbs button{ position:relative; }
+.pdp__thumb-label{ position:absolute; left:0; right:0; bottom:0; padding:.12rem 0; font-size:.5rem; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase; text-align:center; color:#fff; background:rgba(14,36,86,.66); pointer-events:none; }
 .pdp__thumbs button{
   width:60px; height:60px; border-radius:var(--radius); overflow:hidden; background:#fff;
   border:1.5px solid transparent; transition:border-color .3s, transform .3s; flex:none;

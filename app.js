@@ -239,7 +239,8 @@ function openPDP(slug){
   if(!p) return;
   if(!p.colors || !p.colors.length){ toast('Details for this piece are unavailable right now.'); return; }
   lastFocus = document.activeElement;
-  pdpState = { slug, color: p.colors[0].name, size:null, qty:1 };
+  const startColor = p.colors.some(c => c.name === p.heroColor) ? p.heroColor : p.colors[0].name;
+  pdpState = { slug, color: startColor, size:null, qty:1 };
   const { main, sub } = splitTitle(p.title);
 
   $('#pdpVerse').textContent = p.verse;
@@ -267,12 +268,24 @@ function openPDP(slug){
   requestAnimationFrame(() => $('#pdpClose').focus());
 }
 
+const SIDE_LABEL = { front:'Front', back:'Back' };
+function setSide(side){
+  const el = $('#pdpSide');
+  if(!el) return;
+  el.textContent = SIDE_LABEL[side] || '';
+  el.hidden = !SIDE_LABEL[side];
+}
 function setGallery(p, colorName){
   const c = colorOf(p, colorName);
   const imgs = (c && c.images && c.images.length) ? c.images : [p.img].filter(Boolean);
-  setMainImage(imgs[0], `${splitTitle(p.title).main} — ${colorName}`);
-  $('#pdpThumbs').innerHTML = imgs.map((src,i) =>
-    `<button class="${i===0?'is-active':''}" data-img="${src}" aria-label="View image ${i+1}"><img src="${src}" alt="" loading="lazy" decoding="async"></button>`).join('');
+  const sides = p.sides || [];
+  const name = splitTitle(p.title).main;
+  setMainImage(imgs[0], `${name} — ${colorName}${sides[0] ? ` (${sides[0]})` : ''}`);
+  setSide(sides[0]);
+  $('#pdpThumbs').innerHTML = imgs.map((src,i) => {
+    const side = sides[i] || '', label = SIDE_LABEL[side];
+    return `<button class="${i===0?'is-active':''}" data-img="${src}" data-side="${side}" aria-label="View ${label ? label.toLowerCase() : 'image ' + (i+1)}"><img src="${src}" alt="" loading="lazy" decoding="async">${label ? `<span class="pdp__thumb-label">${label}</span>` : ''}</button>`;
+  }).join('');
 }
 
 function closePDP(){
@@ -307,6 +320,7 @@ pdp.addEventListener('click', e => {
   const th = e.target.closest('#pdpThumbs button');
   if(th){
     setMainImage(th.dataset.img);
+    setSide(th.dataset.side);
     $$('#pdpThumbs button', pdp).forEach(x => x.classList.toggle('is-active', x===th));
     return;
   }
